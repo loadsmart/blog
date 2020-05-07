@@ -7,7 +7,7 @@ module.exports = {
   ],
   // Customize your site metadata:
   siteMetadata: {
-    title: `My Blog Title`,
+    title: `Loadsmart.eng`,
     author: `My Name`,
     description: `My site description...`,
     social: [
@@ -21,4 +21,4 @@ module.exports = {
       },
     ],
   },
-}
+};
