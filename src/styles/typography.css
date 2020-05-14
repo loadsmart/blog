@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'SharpSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/SharpSans-Bold.eot');
+  src: url('./fonts/SharpSans-Bold.woff') format('woff'),
+    url('./fonts/SharpSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SharpSans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/SharpSans-Bold.eot');
+  src: url('./fonts/SharpSans-Bold.woff') format('woff'),
+    url('./fonts/SharpSans-Bold.woff2') format('woff2');
+}
