@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Hello World 2
 author: Someone
 layout: post
 lang: en
