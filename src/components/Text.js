@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { font, colors } from '../styles/theme';
+import { theme } from '../styles/theme';
 
 const Text = styled.div`
   font-size: 20px;
@@ -15,11 +15,11 @@ const Text = styled.div`
   h4,
   h5,
   h6 {
-    font-family: ${font.title};
+    font-family: ${theme.light.fonts.title};
   }
 
   a {
-    color: ${colors.light.primary};
+    /* color: ${theme.light.colors.primary}; */
   }
 `;
 

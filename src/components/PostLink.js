@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Link from '../components/Link';
-import { font, colors } from '../styles/theme';
+import { font, colors, theme } from '../styles/theme';
 
 const Title = styled.h1`
   color: ${colors.light.primary};
   font-family: ${font.title};
   font-weight: 900;
   margin: 0;
-  font-size: 28px;
+  font-size: 40px;
   letter-spacing: -2px;
   line-height: 1.1;
-  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const ItemDate = styled.div`
@@ -24,15 +26,20 @@ const ItemDate = styled.div`
 `;
 
 const Text = styled.div`
-  margin: 20px 0;
+  margin: 20px 0 50px 0;
+  font-family: ${theme.light.fonts.text};
+  font-size: 20px;
+  font-weight: 500;
 `;
 
 const PostLink = ({ post }) => (
-  <Link href={post.frontmatter.path}>
-    <Title>{post.frontmatter.title}</Title>
+  <>
+    <Title>
+      <a href={post.frontmatter.path}>{post.frontmatter.title}</a>
+    </Title>
     <ItemDate>{post.frontmatter.date}</ItemDate>
     <Text>{post.excerpt}</Text>
-  </Link>
+  </>
 );
 
 export default PostLink;

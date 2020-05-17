@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { font, colors } from '../styles/theme';
+import { theme } from '../styles/theme';
 
 const Wrapper = styled.div`
   --switch-width: 64px;
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
 
   .switch__marker {
     position: relative;
-    background-color: ${colors.light.secondary};
+    background-color: ${theme.light.colors.primary};
     width: calc(var(--switch-height) - var(--switch-padding) * 2);
     height: calc(var(--switch-height) - var(--switch-padding) * 2);
     border-radius: 50%;
@@ -65,7 +65,7 @@ const Wrapper = styled.div`
 `;
 
 const Switch = styled.div`
-  background: #fff;
+  background-color: ${theme.light.colors.secondary};
   display: inline-block;
   flex-shrink: 0;
   align-items: center;

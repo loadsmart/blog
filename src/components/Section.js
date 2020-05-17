@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { screen } from '../styles/screen';
+import { theme } from '../styles/theme';
 
 const Section = styled.div`
-  max-width: ${screen.max};
+  width: ${theme.light.sizes.default};
   margin: 0 auto;
 `;
 
