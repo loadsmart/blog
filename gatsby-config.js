@@ -92,5 +92,7 @@ module.exports = {
         trackingId: 'UA-XX',
       },
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 };
