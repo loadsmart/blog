@@ -31,14 +31,6 @@ module.exports = {
               maxWidth: 1280,
             },
           },
-          `gatsby-remark-responsive-iframe`,
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -69,6 +61,7 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },
