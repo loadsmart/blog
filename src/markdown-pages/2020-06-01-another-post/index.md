@@ -10,6 +10,8 @@ tags: ['blogs']
 
 Hello World from the other side.
 
+![](./final_march_webinar_page_05.png)
+
 ```javascript
 parseInt(string, base);
 ```
