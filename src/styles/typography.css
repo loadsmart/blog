@@ -2,34 +2,34 @@
   font-family: 'SharpSans';
   font-style: normal;
   font-weight: 300;
-  src: url('/fonts/SharpSans-Light.eot');
-  src: url('/fonts/SharpSans-Light.woff') format('woff'),
-    url('/fonts/SharpSans-Light.woff2') format('woff2');
+  src: url('fonts/SharpSans-Light.eot');
+  src: url('fonts/SharpSans-Light.woff') format('woff'),
+    url('fonts/SharpSans-Light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SharpSans';
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/SharpSans-Medium.eot');
-  src: url('/fonts/SharpSans-Medium.woff') format('woff'),
-    url('/fonts/SharpSans-Medium.woff2') format('woff2');
+  src: url('fonts/SharpSans-Medium.eot');
+  src: url('fonts/SharpSans-Medium.woff') format('woff'),
+    url('fonts/SharpSans-Medium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SharpSans';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/SharpSans-Bold.eot');
-  src: url('/fonts/SharpSans-Bold.woff') format('woff'),
-    url('/fonts/SharpSans-Bold.woff2') format('woff2');
+  src: url('fonts/SharpSans-Bold.eot');
+  src: url('fonts/SharpSans-Bold.woff') format('woff'),
+    url('fonts/SharpSans-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SharpSans';
   font-style: normal;
   font-weight: 900;
-  src: url('/fonts/SharpSans-Bold.eot');
-  src: url('/fonts/SharpSans-Bold.woff') format('woff'),
-    url('/fonts/SharpSans-Bold.woff2') format('woff2');
+  src: url('fonts/SharpSans-Bold.eot');
+  src: url('fonts/SharpSans-Bold.woff') format('woff'),
+    url('fonts/SharpSans-Bold.woff2') format('woff2');
 }
