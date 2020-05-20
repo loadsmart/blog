@@ -41,7 +41,6 @@ const Wrapper = styled(Section)`
 
 const Nav = styled.nav`
   background: #e7ebef;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
   color: ${theme.light.colors.primary};
   padding: 25px 0;
   margin: 0 auto;
