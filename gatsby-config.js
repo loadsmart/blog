@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Loadsmart`,
+    siteUrl: `https://eloquent-bohr-787413.netlify.app`,
     description: `Move more with less`,
     author: `@loadsmartus`,
   },
@@ -99,5 +100,7 @@ module.exports = {
         display: 'swap',
       },
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 };
