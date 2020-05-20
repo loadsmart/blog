@@ -14,19 +14,19 @@ import '../styles/layout.css';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import { screen } from '../styles/screen';
-import { font, colors } from '../styles/theme';
+import { theme } from '../styles/theme';
 
 import Header from './Header';
 import Footer from './Footer';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${colors.light.text}
+    color: ${theme.light.colors.text}
   }
 `;
 
 const Wrapper = styled.div`
-  font-family: ${font.text};
+  font-family: ${theme.light.fonts.text};
   padding: 15px 7px 15px 0;
   margin: 0 auto;
   width: 100%;

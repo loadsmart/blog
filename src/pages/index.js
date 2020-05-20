@@ -6,9 +6,14 @@ import PostLink from '../components/PostLink';
 import Section from '../components/Section';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import { screen } from '../styles/screen';
 
 const Wrapper = styled(Section)`
-  margin-top: 100px;
+  margin-top: 50px;
+
+  ${screen.lg} {
+    margin-top: 100px;
+  }
 `;
 
 const BlogPage = ({

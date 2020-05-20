@@ -4,6 +4,29 @@ import styled from 'styled-components';
 
 import Section from './Section';
 import { theme } from '../styles/theme';
+import { screen } from '../styles/screen';
+
+const Wrapper = styled(Section)`
+  position: relative;
+  width: 100%;
+
+  ${screen.lg} {
+    width: ${theme.light.sizes.default};
+  }
+`;
+
+const Nav = styled.nav`
+  background: #e7ebef;
+  color: ${theme.light.colors.primary};
+  padding: 25px 15px;
+  margin: 0 auto;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+`;
 
 const Logo = styled.span`
   display: inline-block;
@@ -20,36 +43,25 @@ const Logo = styled.span`
     line-height: 22px;
     text-decoration: none;
     vertical-align: bottom;
-    margin-left: 6px;
+
+    ${screen.lg} {
+      margin-left: 6px;
+    }
 
     &:before {
       content: '/';
-      display: inline-block;
+      display: none;
       margin-right: 3px;
+
+      ${screen.lg} {
+        display: inline-block;
+      }
     }
   }
 
   svg {
     vertical-align: middle;
   }
-`;
-
-const Wrapper = styled(Section)`
-  position: relative;
-  max-width: ${theme.light.sizes.default};
-`;
-
-const Nav = styled.nav`
-  background: #e7ebef;
-  color: ${theme.light.colors.primary};
-  padding: 25px 0;
-  margin: 0 auto;
-  position: fixed;
-  text-transform: uppercase;
-  top: 0;
-  right: 0;
-  width: 100%;
-  z-index: 10;
 `;
 
 const Links = styled.div`
