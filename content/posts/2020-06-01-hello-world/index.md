@@ -15,9 +15,6 @@ Hello World from the other side.
 parseInt(string, base);
 ```
 
-##STRING
-corresponde ao conjunto de caracteres que deseja converter para inteiro;
-
 ## Examples
 
 ```javascript

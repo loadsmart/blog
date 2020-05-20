@@ -6,7 +6,7 @@ const THEME_LIGHT = {
   },
   colors: {
     primary: `#29D455`,
-    secondary: `#353e47`,
+    secondary: `#1d2124`,
     text: `#000`,
   },
   sizes: {

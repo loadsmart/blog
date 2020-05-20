@@ -24,9 +24,6 @@ This surge has forced truckers to spend even more time on the road and less time
 
 From everyone at Loadsmart, we want to thank our carriers for their work and acknowledge their sacrifice.
 
-##STRING
-corresponde ao conjunto de caracteres que deseja converter para inteiro;
-
 ## Examples
 
 ```javascript

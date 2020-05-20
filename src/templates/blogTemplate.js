@@ -10,10 +10,15 @@ import SEO from '../components/SEO';
 import profile from './ls-icon.png';
 
 import { screen } from '../styles/screen';
+import { theme } from '../styles/theme';
 
 const PostWrapper = styled.div`
   .gatsby-highlight {
     margin: 10px 0 20px;
+
+    pre {
+      background-color: ${theme.light.colors.secondary};
+    }
   }
 `;
 

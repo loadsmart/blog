@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 import Section from './Section';
@@ -28,12 +27,12 @@ const Nav = styled.nav`
   z-index: 10;
 `;
 
-const Logo = styled.span`
+const Logo = styled.a`
   display: inline-block;
   text-align: left;
   width: 40%;
 
-  a {
+  span {
     color: #6a7884 !important;
     display: inline-block;
     font-family: ${theme.light.fonts.text};
@@ -91,7 +90,7 @@ const Links = styled.div`
 const Header = () => (
   <Nav>
     <Wrapper>
-      <Logo>
+      <Logo href='/'>
         <svg
           width='131'
           height='22'
@@ -123,7 +122,7 @@ const Header = () => (
             ></use>
           </g>
         </svg>
-        <Link to='/'>Engineering</Link>
+        <span>Engineering</span>
       </Logo>
       <Links>
         <a href='https://loadsmart.com/careers/'>Carreers</a>
