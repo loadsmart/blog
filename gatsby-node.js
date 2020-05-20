@@ -23,6 +23,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             excerpt(pruneLength: 250)
             frontmatter {
               path
+              title
+              author
             }
           }
         }

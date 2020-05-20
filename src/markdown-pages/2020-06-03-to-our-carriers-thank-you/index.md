@@ -1,20 +1,28 @@
 ---
-title: Second Post
-author: Someone
+title: To Our Carriers Thank You
+author: John P
+twitter: loadsmartus
 layout: post
 lang: en
-path: /blog/second-post/
-date: '2011-02-22'
+path: /blog/to-our-carriers-thank-you/
+date: '2020-06-03'
 tags: ['blogs']
 ---
 
-Hello World from the other side.
-
 ![](./final_march_webinar_page_05.png)
 
-```javascript
-parseInt(string, base);
-```
+These are uncertain times, but you’re not letting that stop you from keeping America running.
+Only a couple of weeks ago, transportation was humming along as usual: freight volumes were normal and flat and carriers were only rejecting their contracted loads 4% of the time.
+
+Since COVID-19 has gripped America’s conscious and economy in early March, carriers have been faced with an unprecedented surge in shipments that eclipsed records previously set in 2018.
+
+## FreightWaves Sonar
+
+Freight volume seemingly grew +30% over night and tender rejections grew to their highest point in several months.
+
+This surge has forced truckers to spend even more time on the road and less time with their families… all to keep grocery store shelves full and pharmacies fully stocked.
+
+From everyone at Loadsmart, we want to thank our carriers for their work and acknowledge their sacrifice.
 
 ##STRING
 corresponde ao conjunto de caracteres que deseja converter para inteiro;

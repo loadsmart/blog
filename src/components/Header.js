@@ -3,13 +3,31 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 import Section from './Section';
-import SwitchTheme from './SwitchTheme';
-import { font, theme } from '../styles/theme';
+import { theme } from '../styles/theme';
 
 const Logo = styled.span`
   display: inline-block;
   text-align: left;
   width: 40%;
+
+  a {
+    color: #6a7884 !important;
+    display: inline-block;
+    font-family: ${theme.light.fonts.text};
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-decoration: none;
+    vertical-align: bottom;
+    margin-left: 6px;
+
+    &:before {
+      content: '/';
+      display: inline-block;
+      margin-right: 3px;
+    }
+  }
 
   svg {
     vertical-align: middle;
@@ -22,6 +40,8 @@ const Wrapper = styled(Section)`
 `;
 
 const Nav = styled.nav`
+  background: #e7ebef;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
   color: ${theme.light.colors.primary};
   padding: 25px 0;
   margin: 0 auto;
@@ -31,26 +51,28 @@ const Nav = styled.nav`
   right: 0;
   width: 100%;
   z-index: 10;
-
-  a {
-    display: inline-block;
-    margin-left: 10px;
-    line-height: 22px;
-    font-family: ${font.title};
-    font-weight: 900;
-    text-decoration: none;
-    vertical-align: sub;
-  }
 `;
 
 const Links = styled.div`
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  vertical-align: top;
 
-    a {
-      padding: 0;
+  a {
+    padding: 0;
+    color: #333b43 !important;
+    display: inline-block;
+    font-family: ${theme.light.fonts.title};
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-left: 15px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 `;
@@ -93,7 +115,8 @@ const Header = () => (
         <Link to='/'>Engineering</Link>
       </Logo>
       <Links>
-        <SwitchTheme />
+        <a href='https://loadsmart.com/careers/'>Carreers</a>
+        <a href='https://github.com/loadsmart/'>Github</a>
       </Links>
     </Wrapper>
   </Nav>

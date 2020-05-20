@@ -68,10 +68,10 @@ export default function Template({
     <Layout>
       <SEO title={frontmatter.title} />
       <Section>
-        <Title>{frontmatter.title}</Title>
         <span>{frontmatter.date}</span>
 
         <PostWrapper>
+          <Title>{frontmatter.title}</Title>
           <Text>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </Text>

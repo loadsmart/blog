@@ -1,10 +1,11 @@
 ---
 title: Hello World 2
-author: Someone
+author: Joe R
+twitter: loadsmartus
 layout: post
 lang: en
 path: /blog/hello-world/
-date: '2011-02-22'
+date: '2020-06-01'
 tags: ['blogs']
 ---
 

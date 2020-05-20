@@ -82,7 +82,7 @@ module.exports = {
       options: {
         custom: {
           families: ['SharpSans'],
-          urls: ['/static/fonts.css'],
+          urls: ['/styles/typography.css'],
         },
       },
     },
@@ -92,7 +92,12 @@ module.exports = {
         trackingId: 'UA-XX',
       },
     },
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto+Slab\:300,400,500,400i,700`],
+        display: 'swap',
+      },
+    },
   ],
 };
