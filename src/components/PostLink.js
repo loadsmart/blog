@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import { theme } from '../styles/theme';
 
+import { screen } from '../styles/screen';
+
 const Wrapper = styled.div`
   border-bottom: 1px solid #bdc7d0;
   margin-bottom: 30px;
@@ -15,28 +17,47 @@ const Block = styled.div`
 
 const Publication = styled(Block)`
   display: inline-block;
-  width: 20%;
+  width: 100%;
   color: #6a7884;
   font-family: ${theme.light.fonts.title};
   font-size: 14px;
   letter-spacing: 0;
+
+  ${screen.lg} {
+    width: 20%;
+  }
 `;
 
 const Date = styled.div`
+  display: inline-block;
   font-weight: bold;
+  display: inline-block;
   line-height: 1em;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 0;
+
+  ${screen.lg} {
+    display: block;
+  }
 `;
 
 const Author = styled.div`
+  display: inline-block;
   font-weight: 300;
   line-height: 16px;
+
+  ${screen.lg} {
+    display: block;
+  }
 `;
 
 const Article = styled(Block)`
   color: #1d2124;
   display: inline-block;
-  width: 80%;
+  width: 100%;
+
+  ${screen.lg} {
+    width: 80%;
+  }
 `;
 
 const Title = styled.h1`
