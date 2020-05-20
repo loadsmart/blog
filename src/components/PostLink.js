@@ -43,10 +43,20 @@ const Date = styled.div`
 const Author = styled.div`
   display: inline-block;
   font-weight: 300;
-  line-height: 16px;
+  line-height: 1em;
+  width: 50%;
+
+  br {
+    display: none;
+
+    ${screen.lg} {
+      display: inline-block;
+    }
+  }
 
   ${screen.lg} {
     display: block;
+    width: auto;
   }
 `;
 
@@ -92,13 +102,25 @@ const ReadMore = styled.a`
   text-align: right;
 `;
 
+const TwitterHandle = styled.a`
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const PostLink = ({ post }) => (
   <Wrapper>
     <Publication>
       <Date>{post.frontmatter.date}</Date>
       <Author>
         by <br />
-        {post.frontmatter.author}
+        <TwitterHandle href={post.frontmatter.twitter}>
+          {post.frontmatter.author}
+        </TwitterHandle>
       </Author>
     </Publication>
     <Article>
