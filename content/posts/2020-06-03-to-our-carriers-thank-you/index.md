@@ -27,15 +27,15 @@ From everyone at Loadsmart, we want to thank our carriers for their work and ack
 ## Examples
 
 ```javascript
-parseInt('01'); //retorns 1
-parseInt('02'); //retorns 2
-parseInt('03'); //retorns 3
-parseInt('04'); //retorns 4
-parseInt('05'); //retorns 5
-parseInt('06'); //retorns 6
-parseInt('07'); //retorns 7
-parseInt('08'); //retorns 0
-parseInt('09'); //retorns 0
+parseInt('01'); //returns 1
+parseInt('02'); //returns 2
+parseInt('03'); //returns 3
+parseInt('04'); //returns 4
+parseInt('05'); //returns 5
+parseInt('06'); //returns 6
+parseInt('07'); //returns 7
+parseInt('08'); //returns 0
+parseInt('09'); //returns 0
 ```
 
 This is a link **[ECMAScript 5][1]**
