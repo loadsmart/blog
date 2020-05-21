@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { theme } from '../styles/theme';
-import { screen } from '../styles/screen';
+import { theme } from "../styles/theme";
+import { screen } from "../styles/screen";
 
 const Wrapper = styled.div`
   border-bottom: 1px solid #bdc7d0;
@@ -116,9 +116,10 @@ const PostLink = ({ post }) => (
     <Publication>
       <Date>{post.frontmatter.date}</Date>
       <Author>
-        by <br />
-        <TwitterHandle href={post.frontmatter.twitter}>
-          {post.frontmatter.author}
+        by {post.frontmatter.author}
+        <br />
+        <TwitterHandle href={`https://twitter.com/${post.frontmatter.twitter}`}>
+          @{post.frontmatter.twitter}
         </TwitterHandle>
       </Author>
     </Publication>
