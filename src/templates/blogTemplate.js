@@ -1,16 +1,16 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
+import React from "react";
+import { graphql } from "gatsby";
+import styled from "styled-components";
 
-import Title from '../components/Title';
-import Section from '../components/Section';
-import Text from '../components/Text';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import profile from './ls-icon.png';
+import Title from "../components/Title";
+import Section from "../components/Section";
+import Text from "../components/Text";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import profile from "./ls-icon.png";
 
-import { screen } from '../styles/screen';
-import { theme } from '../styles/theme';
+import { screen } from "../styles/screen";
+import { theme } from "../styles/theme";
 
 const PostWrapper = styled.div`
   .gatsby-highlight {
@@ -63,6 +63,25 @@ const Footer = styled.h1`
   }
 `;
 
+export const UtterancesComments = () => (
+  <section
+    ref={(elem) => {
+      if (!elem) {
+        return;
+      }
+      const scriptElem = document.createElement("script");
+      scriptElem.src = "https://utteranc.es/client.js";
+      scriptElem.async = true;
+      scriptElem.crossOrigin = "anonymous";
+      scriptElem.setAttribute("repo", "loadsmart/blog");
+      scriptElem.setAttribute("issue-term", "title");
+      scriptElem.setAttribute("label", "comments");
+      scriptElem.setAttribute("theme", "github-light");
+      elem.appendChild(scriptElem);
+    }}
+  />
+);
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -82,23 +101,25 @@ export default function Template({
           </Text>
         </PostWrapper>
 
+        <UtterancesComments />
+
         <Footer>
-          <img src={profile} alt='profile' width={25} height={25} />
+          <img src={profile} alt="profile" width={25} height={25} />
           <ul>
             <li>
               <a
-                href='https://www.youtube.com/channel/x'
-                target='_blank'
-                rel='noopener noreferrer'
+                href="https://www.youtube.com/channel/x"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Youtube
               </a>
             </li>
             <li>
               <a
-                href='https://twitter.com/loadsmartus'
-                target='_blank'
-                rel='noopener noreferrer'
+                href="https://twitter.com/loadsmartus"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Twitter
               </a>
