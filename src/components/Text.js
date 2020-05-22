@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { theme } from '../styles/theme';
+import { theme } from "../styles/theme";
 
 const Text = styled.div`
   padding: 15px 0;
   position: relative;
   color: #1d2124;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 2em;
   letter-spacing: 0;
 
   h1,

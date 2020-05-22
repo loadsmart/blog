@@ -85,7 +85,7 @@ const Title = styled.h1`
 const Text = styled.p`
   margin: 20px 0 10px 0;
   font-family: ${theme.light.fonts.text};
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
 `;
 
