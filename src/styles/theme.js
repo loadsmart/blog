@@ -10,7 +10,7 @@ const THEME_LIGHT = {
     text: `#000`,
   },
   sizes: {
-    default: 'max(50vw, 900px)',
+    default: 'max(50vw, 760px)',
     min: '340px',
   },
 };
