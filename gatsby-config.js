@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Loadsmart`,
+    title: `Loadsmart Engineering`,
     siteUrl: `https://eloquent-bohr-787413.netlify.app`,
     description: `Move more with less`,
     author: `@loadsmartus`,

@@ -1,9 +1,9 @@
 {
-  "name": "eng.loadsmart.com",
+  "name": "loadsmart-engineering-blog",
   "private": true,
-  "description": "Loadsmart's website",
+  "description": "Loadsmart's Engineering Blog",
   "version": "0.1.0",
-  "author": "Loadsmart <eng@loadsmart.com>",
+  "author": "Loadsmart Engineering <engineering@loadsmart.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.45",

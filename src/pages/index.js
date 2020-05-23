@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { graphql } from 'gatsby';
+import React from "react";
+import styled from "styled-components";
+import { graphql } from "gatsby";
 
-import PostLink from '../components/PostLink';
-import Section from '../components/Section';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import { screen } from '../styles/screen';
+import PostLink from "../components/PostLink";
+import Section from "../components/Section";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import { screen } from "../styles/screen";
 
 const Wrapper = styled(Section)`
   margin-top: 50px;
@@ -27,7 +27,7 @@ const BlogPage = ({
 
   return (
     <Layout>
-      <SEO title='Blog' />
+      <SEO title={"Loadsmart Engineering"} />
       <Wrapper>
         <div>{Posts}</div>
       </Wrapper>
