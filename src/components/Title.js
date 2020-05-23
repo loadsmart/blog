@@ -10,13 +10,13 @@ const Title = styled.h1`
   font-weight: 900;
   line-height: 1em;
   margin: 50px 0 25px 0;
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 25px;
 
   ${screen.lg} {
-    font-size: 60px;
+    font-size: 40px;
+    line-height: 1.2em;
     letter-spacing: -2px;
-    margin: 50px 0 50px 0;
+    margin: 60px 0 30px 0;
   }
 `;
 
