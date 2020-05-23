@@ -102,30 +102,6 @@ export default function Template({
         </PostWrapper>
 
         <UtterancesComments />
-
-        <Footer>
-          <img src={profile} alt="profile" width={25} height={25} />
-          <ul>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/x"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Youtube
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/loadsmartus"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </li>
-          </ul>
-        </Footer>
       </Section>
     </Layout>
   );
