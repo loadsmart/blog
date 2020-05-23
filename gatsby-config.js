@@ -35,15 +35,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
               languageExtensions: [
                 {
-                  language: "superscript",
-                  extend: "javascript",
+                  language: 'superscript',
+                  extend: 'javascript',
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -55,8 +55,8 @@ module.exports = {
                 },
               ],
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: false,
               },
               escapeEntities: {},
@@ -79,28 +79,28 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ["SharpSans"],
-          urls: ["/styles/typography.css"],
+          families: ['SharpSans'],
+          urls: ['/styles/typography.css'],
         },
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-XX",
+        trackingId: 'UA-XX',
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Roboto+Slab\:300,400,500,400i,700`],
-        display: "swap",
+        display: 'swap',
       },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
   ],
-};
+}

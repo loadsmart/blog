@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { theme } from "../styles/theme";
+import { theme } from '../styles/theme'
 
 const Text = styled.div`
   padding: 15px 0;
@@ -19,6 +19,6 @@ const Text = styled.div`
   h6 {
     font-family: ${theme.light.fonts.title};
   }
-`;
+`
 
-export default Text;
+export default Text

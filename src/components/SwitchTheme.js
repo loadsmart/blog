@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
-import { theme } from '../styles/theme';
+import { theme } from '../styles/theme'
 
 const Wrapper = styled.div`
   --switch-width: 64px;
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
     transition: left var(--switch-animation-duration);
     will-change: left;
   }
-`;
+`
 
 const Switch = styled.div`
   background-color: ${theme.light.colors.secondary};
@@ -74,46 +74,46 @@ const Switch = styled.div`
   height: var(--switch-height);
   border-radius: 50em;
   padding: var(--switch-padding) 0;
-`;
+`
 
-const DEFAULT_THEME = 'light';
+const DEFAULT_THEME = 'light'
 
 const useEffectDarkMode = () => {
-  const [theme, setTheme] = useState(DEFAULT_THEME);
+  const [theme, setTheme] = useState(DEFAULT_THEME)
 
   useEffect(() => {
-    const themeSaved = localStorage.getItem('theme');
-    setTheme(themeSaved);
-  }, []);
+    const themeSaved = localStorage.getItem('theme')
+    setTheme(themeSaved)
+  }, [])
 
-  return [theme, setTheme];
-};
+  return [theme, setTheme]
+}
 
 const SwitchTheme = () => {
-  const [theme, setTheme] = useEffectDarkMode(DEFAULT_THEME);
+  const [theme, setTheme] = useEffectDarkMode(DEFAULT_THEME)
 
   const toggle = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', JSON.stringify(newTheme));
-    setTheme(newTheme);
-  };
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    localStorage.setItem('theme', JSON.stringify(newTheme))
+    setTheme(newTheme)
+  }
 
   return (
     <Wrapper>
       <Switch>
-        <input className='switch__input' type='checkbox' id='switchCheckbox1' />
+        <input className="switch__input" type="checkbox" id="switchCheckbox1" />
         <label
-          aria-hidden='true'
-          className='label'
-          htmlFor='switchCheckbox1'
+          aria-hidden="true"
+          className="label"
+          htmlFor="switchCheckbox1"
           onClick={() => toggle()}
         >
           On
         </label>
-        <div aria-hidden='true' className='switch__marker'></div>
+        <div aria-hidden="true" className="switch__marker"></div>
       </Switch>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default SwitchTheme;
+export default SwitchTheme
