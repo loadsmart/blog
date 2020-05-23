@@ -74,7 +74,7 @@ export const UtterancesComments = () => (
       scriptElem.async = true;
       scriptElem.crossOrigin = "anonymous";
       scriptElem.setAttribute("repo", "loadsmart/blog");
-      scriptElem.setAttribute("issue-term", "title");
+      scriptElem.setAttribute("issue-term", "og:title");
       scriptElem.setAttribute("label", "comments");
       scriptElem.setAttribute("theme", "github-light");
       elem.appendChild(scriptElem);
