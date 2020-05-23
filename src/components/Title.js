@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { theme } from '../styles/theme';
-import { screen } from '../styles/screen';
+import { theme } from '../styles/theme'
+import { screen } from '../styles/screen'
 
 const Title = styled.h1`
   color: #333;
@@ -18,6 +18,6 @@ const Title = styled.h1`
     letter-spacing: -2px;
     margin: 60px 0 30px 0;
   }
-`;
+`
 
-export default Title;
+export default Title

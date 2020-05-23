@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { graphql } from "gatsby";
+import React from 'react'
+import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
-import PostLink from "../components/PostLink";
-import Section from "../components/Section";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import { screen } from "../styles/screen";
+import PostLink from '../components/PostLink'
+import Section from '../components/Section'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import { screen } from '../styles/screen'
 
 const Wrapper = styled(Section)`
   margin-top: 50px;
@@ -14,7 +14,7 @@ const Wrapper = styled(Section)`
   ${screen.lg} {
     margin-top: 100px;
   }
-`;
+`
 
 const BlogPage = ({
   data: {
@@ -23,19 +23,19 @@ const BlogPage = ({
 }) => {
   const Posts = edges
     .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+    .map((edge) => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
     <Layout>
-      <SEO title={"Loadsmart Engineering"} />
+      <SEO title={'Loadsmart Engineering'} />
       <Wrapper>
         <div>{Posts}</div>
       </Wrapper>
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPage;
+export default BlogPage
 
 export const pageQuery = graphql`
   query {
@@ -55,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

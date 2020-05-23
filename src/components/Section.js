@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { theme } from '../styles/theme';
-import { screen } from '../styles/screen';
+import { theme } from '../styles/theme'
+import { screen } from '../styles/screen'
 
 const Section = styled.div`
   margin: 0 auto;
@@ -10,6 +10,6 @@ const Section = styled.div`
   ${screen.lg} {
     width: ${theme.light.sizes.default};
   }
-`;
+`
 
-export default Section;
+export default Section

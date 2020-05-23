@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-import { theme } from "../styles/theme";
-import { screen } from "../styles/screen";
+import { theme } from '../styles/theme'
+import { screen } from '../styles/screen'
 
 const Wrapper = styled.div`
   border-bottom: 1px solid #bdc7d0;
   margin-bottom: 30px;
-`;
+`
 
 const Block = styled.div`
   display: inline-block;
   vertical-align: top;
-`;
+`
 
 const Publication = styled(Block)`
   display: inline-block;
@@ -25,7 +25,7 @@ const Publication = styled(Block)`
   ${screen.lg} {
     width: 20%;
   }
-`;
+`
 
 const Date = styled.div`
   display: inline-block;
@@ -37,7 +37,7 @@ const Date = styled.div`
   ${screen.lg} {
     display: block;
   }
-`;
+`
 
 const Author = styled.div`
   display: inline-block;
@@ -57,7 +57,7 @@ const Author = styled.div`
     display: block;
     width: auto;
   }
-`;
+`
 
 const Article = styled(Block)`
   color: #1d2124;
@@ -67,7 +67,7 @@ const Article = styled(Block)`
   ${screen.lg} {
     width: 80%;
   }
-`;
+`
 
 const Title = styled.h1`
   font-family: ${theme.light.fonts.title};
@@ -80,14 +80,14 @@ const Title = styled.h1`
   a {
     text-decoration: none;
   }
-`;
+`
 
 const Text = styled.p`
   margin: 20px 0 10px 0;
   font-family: ${theme.light.fonts.text};
   font-size: 17px;
   font-weight: 400;
-`;
+`
 
 const ReadMore = styled.a`
   color: #6a7884;
@@ -99,7 +99,7 @@ const ReadMore = styled.a`
   line-height: 18px;
   margin-bottom: 15px;
   text-align: right;
-`;
+`
 
 const TwitterHandle = styled.a`
   display: inline-block;
@@ -109,7 +109,7 @@ const TwitterHandle = styled.a`
   &:hover {
     text-decoration: underline;
   }
-`;
+`
 
 const PostLink = ({ post }) => (
   <Wrapper>
@@ -131,6 +131,6 @@ const PostLink = ({ post }) => (
       <ReadMore href={post.frontmatter.path}>Read more</ReadMore>
     </Article>
   </Wrapper>
-);
+)
 
-export default PostLink;
+export default PostLink

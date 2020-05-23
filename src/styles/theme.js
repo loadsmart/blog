@@ -13,8 +13,8 @@ const THEME_LIGHT = {
     default: 'max(50vw, 760px)',
     min: '340px',
   },
-};
+}
 
 export const theme = {
   light: THEME_LIGHT,
-};
+}
