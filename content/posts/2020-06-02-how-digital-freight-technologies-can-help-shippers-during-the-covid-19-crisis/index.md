@@ -9,7 +9,6 @@ date: '2020-06-02'
 tags: ['blogs']
 ---
 
-##Responding to Abrupt Market Disruptions With Digital Freight Technology
 The freight frenzy came on fast but seems to have left even quicker. US Freight volumes have plunged to the lowest rate since Freightwaves began recording them in 2018.
 
 Capacity continues to loosen with most of the country on lockdown and with industries not fully functioning there isn’t enough freight to keep capacity tight.
