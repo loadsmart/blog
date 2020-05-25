@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Loadsmart Engineering`,
-    siteUrl: `https://eloquent-bohr-787413.netlify.app`,
+    siteUrl: `https://engineering.loadsmart.com`,
     description: `Move more with less`,
-    author: `@loadsmartus`,
+    author: `@LoadsmartEng`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
