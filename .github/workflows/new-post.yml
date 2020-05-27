@@ -9,3 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: loadsmart/github-actions/.github/actions/read-blog-post-content@master
+        id: read-blog-post-content
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
