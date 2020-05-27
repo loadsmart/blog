@@ -17,8 +17,8 @@ jobs:
         name: Send Slack notification with preview of the post
         with:
           title: ${{ steps.read-blog-post-content.outputs.title }}
-          author: ${{ steps.read-blog-post-content.author.title }}
-          date: ${{ steps.read-blog-post-content.date.title }}
-          body: ${{ steps.read-blog-post-content.body.title }}
+          author: ${{ steps.read-blog-post-content.outputs.author }}
+          date: ${{ steps.read-blog-post-content.outputs.date }}
+          body: ${{ steps.read-blog-post-content.outputs.body }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
