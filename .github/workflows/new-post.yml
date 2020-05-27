@@ -9,6 +9,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: loadsmart/github-actions/.github/actions/read-blog-post-content@master
+        name: Read blog post content from Markdown
         id: read-blog-post-content
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: loadsmart/github-actions/.github/actions/notify-of-new-blog-post-to-review@master
+        name: Send Slack notification with preview of the post
+        with:
+          title: ${{ steps.read-blog-post-content.outputs.title }}
+          author: ${{ steps.read-blog-post-content.author.title }}
+          date: ${{ steps.read-blog-post-content.date.title }}
+          body: ${{ steps.read-blog-post-content.body.title }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
