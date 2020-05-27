@@ -1,0 +1,11 @@
+name: new-post
+on:
+  pull_request:
+    types: [opened, reopened, edited, labeled]
+jobs:
+  notify-if-blog-post:
+    if: startsWith(github.event.pull_request.title, 'Post') || contains(github.event.pull_request.labels.*.name, 'post')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/read-blog-post-content
