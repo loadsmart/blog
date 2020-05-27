@@ -1,0 +1,10 @@
+name: Read blog post content
+description: Reads the content of a blog post in a PR
+outputs:
+  - title
+  - author
+  - date
+  - body
+runs:
+  using: node12
+  main: index.js
