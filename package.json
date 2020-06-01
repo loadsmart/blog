@@ -47,8 +47,7 @@
     "textlint-rule-no-dead-link": "^4.6.2",
     "textlint-rule-no-todo": "^2.0.1",
     "textlint-rule-spelling": "^0.2.0",
-    "textlint-rule-terminology": "^2.1.4",
-    "textlint-rule-write-good": "^1.6.2"
+    "textlint-rule-terminology": "^2.1.4"
   },
   "keywords": [
     "front-end developer"
@@ -74,7 +73,7 @@
       "prettier --write"
     ],
     "*.md": [
-      "yarn textlint --fix"
+      "yarn textlint"
     ]
   }
 }
