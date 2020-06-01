@@ -1,0 +1,40 @@
+{
+  "filters": {},
+  "rules": {
+    "@textlint-rule/no-unmatched-pair": true,
+    "alex": {
+      "allow": []
+    },
+    "apostrophe": true,
+    "common-misspellings": {
+      "ignore": []
+    },
+    "diacritics": {
+      // List of additional words
+      "words": []
+    },
+    "no-dead-link": {
+      ignore: [
+        "http://localhost:8000"
+      ]
+    },
+    "no-todo": true,
+    "spelling": {
+      "language": "en",
+      "skipPatterns": [
+        "/\\d+/g",
+        "GatsbyJS",
+        "js",
+        "/Loadsmart/i",
+        "localhost",
+        "Netlify"
+      ]
+    },
+    "terminology": {
+      "defaultTerms": true
+    },
+    "write-good": {
+      passive: false
+    }
+  }
+}
