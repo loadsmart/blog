@@ -19,12 +19,8 @@ const Nav = styled.nav`
   color: ${theme.light.colors.primary};
   padding: 25px 15px;
   margin: 0 auto;
-  position: fixed;
   text-transform: uppercase;
-  top: 0;
-  right: 0;
   width: 100%;
-  z-index: 10;
 `
 
 const Logo = styled.a`

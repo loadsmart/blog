@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Title from '../components/Title'
+import PostDate from '../components/PostDate'
 import Section from '../components/Section'
 import Text from '../components/Text'
 import Layout from '../components/Layout'
@@ -49,10 +50,9 @@ export default function Template({
     <Layout>
       <SEO title={frontmatter.title} />
       <Section>
-        <span>{frontmatter.date}</span>
-
         <PostWrapper>
           <Title>{frontmatter.title}</Title>
+          <PostDate>{frontmatter.date}</PostDate>
           <Text>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </Text>
