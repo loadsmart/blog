@@ -27,14 +27,12 @@
         "js",
         "/Loadsmart/i",
         "localhost",
+        "Morocho",
         "Netlify"
       ]
     },
     "terminology": {
       "defaultTerms": true
-    },
-    "write-good": {
-      passive: false
     }
   }
 }

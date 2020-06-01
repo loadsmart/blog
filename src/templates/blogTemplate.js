@@ -57,8 +57,7 @@ export default function Template({
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </Text>
         </PostWrapper>
-
-        <UtterancesComments />
+        {frontmatter.comments && <UtterancesComments />}
       </Section>
     </Layout>
   )
@@ -73,6 +72,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        comments
       }
     }
   }
