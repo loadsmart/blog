@@ -128,7 +128,7 @@ const PostLink = ({ post }) => (
         <a href={post.frontmatter.path}>{post.frontmatter.title}</a>
       </Title>
       <Text>{post.excerpt}</Text>
-      <ReadMore href={post.frontmatter.path}>Read more</ReadMore>
+      <ReadMore href={post.frontmatter.path}>read more</ReadMore>
     </Article>
   </Wrapper>
 )
