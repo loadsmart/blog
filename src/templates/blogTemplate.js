@@ -8,6 +8,7 @@ import Section from '../components/Section'
 import Text from '../components/Text'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import PostAuthor from '../components/PostAuthor'
 
 import { theme } from '../styles/theme'
 
@@ -19,6 +20,12 @@ const PostWrapper = styled.div`
       background-color: ${theme.light.colors.secondary};
     }
   }
+`
+
+const MetaWrapper = styled.div`
+  border-bottom: 1px solid #bdc7d0;
+  font-family: ${theme.light.fonts.title};
+  padding: 10px 0;
 `
 
 export const UtterancesComments = () => (
@@ -52,7 +59,10 @@ export default function Template({
       <Section>
         <PostWrapper>
           <Title>{frontmatter.title}</Title>
-          <PostDate>{frontmatter.date}</PostDate>
+          <MetaWrapper>
+            <PostAuthor author={frontmatter.author} />
+            <PostDate>{frontmatter.date}</PostDate>
+          </MetaWrapper>
           <Text>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </Text>
@@ -73,6 +83,8 @@ export const pageQuery = graphql`
         path
         title
         comments
+        author
+        twitter
       }
     }
   }

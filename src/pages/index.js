@@ -7,8 +7,12 @@ import Section from '../components/Section'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
+import { screen } from '../styles/screen'
+
 const Wrapper = styled(Section)`
-  margin-top: 20px;
+  ${screen.lg} {
+    margin-top: 20px;
+  }
 `
 
 const BlogPage = ({

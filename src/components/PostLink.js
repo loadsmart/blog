@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { theme } from '../styles/theme'
 import { screen } from '../styles/screen'
+import PostAuthor from './PostAuthor'
 
 const Wrapper = styled.div`
   border-bottom: 1px solid #bdc7d0;
@@ -29,33 +30,16 @@ const Publication = styled(Block)`
 
 const Date = styled.div`
   display: inline-block;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 1em;
-  margin: 0 10px 10px 0;
+  color: #1d2124;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25em;
+  margin: 0 10px 5px 0;
 
   ${screen.lg} {
     display: block;
-  }
-`
-
-const Author = styled.div`
-  display: inline-block;
-  font-weight: 300;
-  line-height: 1em;
-  width: 50%;
-
-  br {
-    display: none;
-
-    ${screen.lg} {
-      display: inline-block;
-    }
-  }
-
-  ${screen.lg} {
-    display: block;
-    width: auto;
+    margin: 0 10px 15px 0;
   }
 `
 
@@ -101,27 +85,14 @@ const ReadMore = styled.a`
   text-align: right;
 `
 
-const TwitterHandle = styled.a`
-  display: inline-block;
-  margin-top: 5px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`
-
 const PostLink = ({ post }) => (
   <Wrapper>
     <Publication>
       <Date>{post.frontmatter.date}</Date>
-      <Author>
-        by {post.frontmatter.author}
-        <br />
-        <TwitterHandle href={`https://twitter.com/${post.frontmatter.twitter}`}>
-          @{post.frontmatter.twitter}
-        </TwitterHandle>
-      </Author>
+      <PostAuthor
+        author={post.frontmatter.author}
+        twitter={post.frontmatter.twitter}
+      />
     </Publication>
     <Article>
       <Title>

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-const PostDate = styled.span`
+const PostDate = styled.div`
+  color: #1d2124;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0;
