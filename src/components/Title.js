@@ -16,7 +16,7 @@ const Title = styled.h1`
     font-size: 40px;
     line-height: 1.2em;
     letter-spacing: -2px;
-    margin: 20px 0 0 0;
+    margin: 20px 0 10px 0;
   }
 `
 

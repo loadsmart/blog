@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
 const Section = styled.div`
   display: inline-block;
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   vertical-align: top;
   width: 100%;
 
