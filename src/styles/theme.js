@@ -11,6 +11,7 @@ const THEME_LIGHT = {
   },
   sizes: {
     default: 'max(50vw, 760px)',
+    max: '760px',
     min: '340px',
   },
 }

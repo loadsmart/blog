@@ -8,6 +8,7 @@ const Section = styled.div`
   width: 100%;
 
   ${screen.lg} {
+    max-width: ${theme.light.sizes.max};
     width: ${theme.light.sizes.default};
   }
 `
