@@ -5,7 +5,7 @@ twitter: LoadsmartEng
 layout: post
 lang: en
 path: /blog/hello-world
-date: '2020-06-01'
+date: '2020-06-18'
 comments: true
 ---
 
