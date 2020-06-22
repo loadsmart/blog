@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
-import PostLink from '../components/PostLink'
-import Section from '../components/Section'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import PostLink from 'components/PostLink'
+import Section from 'components/Section'
+import Layout from 'components/Layout'
+import SEO from 'components/SEO'
 
-import { screen } from '../styles/screen'
+import { screen } from 'styles/screen'
 
 const Wrapper = styled(Section)`
   ${screen.lg} {

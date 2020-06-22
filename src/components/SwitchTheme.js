@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import { theme } from '../styles/theme'
+import { theme } from 'styles/theme'
 
 const Wrapper = styled.div`
   --switch-width: 64px;

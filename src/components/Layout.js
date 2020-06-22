@@ -8,13 +8,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../styles/typography.css'
-import '../styles/layout.css'
+import 'styles/typography.css'
+import 'styles/layout.css'
 
 import styled, { createGlobalStyle } from 'styled-components'
 
-import { screen } from '../styles/screen'
-import { theme } from '../styles/theme'
+import { screen } from 'styles/screen'
+import { theme } from 'styles/theme'
 
 import Header from './Header'
 

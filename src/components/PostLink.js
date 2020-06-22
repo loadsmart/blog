@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { theme } from '../styles/theme'
-import { screen } from '../styles/screen'
+import { theme } from 'styles/theme'
+import { screen } from 'styles/screen'
 import PostAuthor from './PostAuthor'
 
 const Wrapper = styled.div`
