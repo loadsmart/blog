@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import Section from './Section'
 import LogoMobile from './LogoMobile'
 import LogoDesktop from './LogoDesktop'
-import { theme } from '../styles/theme'
-import { screen } from '../styles/screen'
+import { theme } from 'styles/theme'
+import { screen } from 'styles/screen'
 
 const Wrapper = styled(Section)`
   position: relative;

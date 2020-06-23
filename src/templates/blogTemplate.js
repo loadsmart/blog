@@ -2,15 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Title from '../components/Title'
-import PostDate from '../components/PostDate'
-import Section from '../components/Section'
-import Text from '../components/Text'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import PostAuthor from '../components/PostAuthor'
+import Title from 'components/Title'
+import PostDate from 'components/PostDate'
+import Section from 'components/Section'
+import Text from 'components/Text'
+import Layout from 'components/Layout'
+import SEO from 'components/SEO'
+import PostAuthor from 'components/PostAuthor'
 
-import { theme } from '../styles/theme'
+import { theme } from 'styles/theme'
 
 const PostWrapper = styled.div`
   .gatsby-highlight {

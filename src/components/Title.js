@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { theme } from '../styles/theme'
-import { screen } from '../styles/screen'
+import { theme } from 'styles/theme'
+import { screen } from 'styles/screen'
 
 const Title = styled.h1`
   color: #333;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { screen } from '../styles/screen'
+import { screen } from 'styles/screen'
 
 const Author = styled.div`
   color: #151b1f;
