@@ -23,10 +23,14 @@
       "language": "en",
       "skipPatterns": [
         "/\\d+/g",
+        "/\[.+\]\(.+\)/g",
         "GatsbyJS",
+        "Gregor Martynus",
         "js",
         "/Loadsmart/i",
+        "https",
         "localhost",
+        "microblogging",
         "Morocho",
         "Netlify"
       ]

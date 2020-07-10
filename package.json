@@ -62,7 +62,7 @@
     "clean": "gatsby clean",
     "format": "prettier --write \"{,!(.cache|node_modules|public)/**/}*.{js,json}\"",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "textlint": "./node_modules/.bin/textlint README.md content/posts/*.md"
+    "textlint": "./node_modules/.bin/textlint README.md content/posts/**/*.md"
   },
   "husky": {
     "hooks": {
