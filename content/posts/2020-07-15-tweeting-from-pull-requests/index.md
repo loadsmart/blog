@@ -36,7 +36,7 @@ I have used [Danger](https://danger.systems/js/) and [Peril](https://github.com/
 
 Surprisingly, most of the things I was planning to implement were already done by [Gregor Martynus](https://github.com/gr2m) in their [twitter-together](https://github.com/gr2m/twitter-together) project. From the steps of the diagram above, the Action takes care of 1, 2 and 4. The only step missing here is the Slack notification.
 
-There’s a few Actions to interact with Slack in the marketplace. They are all very similar to each other and it seems to me that the same problem was solved multiple times (thinking out loud, it would be good if GitHub had a way to make Actions "official"). So I decided to implement this step myself. I would have to create a custom action in the end to glue all the work together (passing to Slack the content of the tweet in the PR) so this would be only an extra step. By the way, their [Block Kit API](https://api.slack.com/block-kit) is very flexible and you can build interesting custom notifications:
+There are a few Actions to interact with Slack in the marketplace. They are all very similar to each other and it seems to me that the same problem was solved multiple times (thinking out loud, it would be good if GitHub had a way to make Actions "official"). So I decided to implement this step myself. I would have to create a custom action in the end to glue all the work together (passing to Slack the content of the tweet in the PR) so this would be only an extra step. By the way, their [Block Kit API](https://api.slack.com/block-kit) is very flexible and you can build interesting custom notifications:
 
 ![./notification.png](notification.png)
 
