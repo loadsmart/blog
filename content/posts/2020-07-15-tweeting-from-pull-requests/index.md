@@ -42,4 +42,4 @@ There’s a few Actions to interact with Slack in the marketplace. They are all 
 
 The example above presents a notification for a [Pull Request](https://github.com/loadsmart/tweets/pull/9) that after opened (and [identified](https://github.com/loadsmart/tweets/pull/9/checks?check_run_id=613179583) as a valid tweet-type PR), sends a message to our team asking for reviews. Once approved, it gets merged into [master](https://github.com/loadsmart/tweets/runs/613204451?check_suite_focus=true) and then finally [tweeted](https://twitter.com/LoadsmartEng/status/1253412556867203073).
 
-For the complete workflow, check the project we have just open sourced at [https://github.com/loadsmart/tweets](https://github.com/loadsmart/tweets)
+For the complete workflow, check the project we have just open-sourced at [https://github.com/loadsmart/tweets](https://github.com/loadsmart/tweets)
