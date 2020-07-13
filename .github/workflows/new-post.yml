@@ -4,7 +4,7 @@ on:
     types: [opened, reopened, edited, labeled]
 jobs:
   notify-if-blog-post:
-    if: startsWith(github.event.pull_request.title, 'Post') || contains(github.event.pull_request.labels.*.name, 'post')
+    if: github.event.pull_request.draft == false && (startsWith(github.event.pull_request.title, 'Post') || contains(github.event.pull_request.labels.*.name, 'post'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
