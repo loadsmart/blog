@@ -21,6 +21,15 @@ Here are some comparisons with the official SDK:
 
 ### Authenticate
 
+For both official SDK and Gmail Wrapper, you will use the [service account key](https://developers.google.com/identity/protocols/oauth2) with a [refresh token](https://developers.google.com/identity/protocols/oauth2#5.-refresh-the-access-token,-if-necessary.).
+It is a JSON file like this:
+
+```json
+{
+  "token": "...", "client_id": "...", "client_secret": "...", "token_uri": "...", "refresh_token": "..."
+}
+```
+
 **Official SDK**
 
 ```python
@@ -82,5 +91,5 @@ If you felt interested you can have a more detailed documentation on GitHub.
 
 To install, you already guess: `pip install gmail-wrapper`
 
-Of course, Gmail Wrapper has limitations too, like sending emails with attachments, for example, but these can be easily addressed by the community.
+Of course, Gmail Wrapper has limitations too, like sending emails with attachments or authenticating with non-renewable tokens, for example, but these can be easily addressed by the community.
 So, don’t forget to contribute if you find any bugs or if you think something can be improved, we will be more than happy with your suggestion or pull-request.
