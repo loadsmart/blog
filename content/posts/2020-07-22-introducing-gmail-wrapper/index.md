@@ -91,7 +91,8 @@ If you are interested in learning more about this package there is detailed docu
 
 To install, you already guess it: `pip install gmail-wrapper`
 
-Of course the initial build of Gmail Wrapper has limitations. For example, sending emails with attachments or authenticating with non-renewable tokens are not possible.
+Of course the initial build of Gmail Wrapper has limitations.
+For example, sending emails with attachments or authenticating with non-renewable tokens is not possible.
 However, these are solvable issues that can easily be addressed by the community.
 So please don’t forget to contribute if you find any bugs or if you think something can be improved!
 We will be more than happy to review your suggestions or pull-requests.
