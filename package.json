@@ -74,7 +74,7 @@
       "prettier --write"
     ],
     "*.md": [
-      "yarn textlint"
+      "yarn textlint --fix"
     ]
   }
 }

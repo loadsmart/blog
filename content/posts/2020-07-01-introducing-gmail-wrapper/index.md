@@ -9,14 +9,14 @@ date: '2020-07-22'
 comments: true
 ---
 
-If you ever had to read or write emails using the Gmail Official [Python SDK](https://googleapis.github.io/google-api-python-client/docs/dyn/gmail_v1.html) you know it is a pain for some reasons:
+If you’ve ever had to read or write emails using the Official [Gmail Python SDK](https://googleapis.github.io/google-api-python-client/docs/dyn/gmail_v1.html), then you know it is a pain for multiple reasons:
 
 - It is verbose, using dozens of chained objects like `foo().bar().baz()`
-- It is not intuitive (How to authenticate? How to read my messages? How to send a message? I don’t know...)
-- Although using a lot of classes, the responses are always plain dictionaries (What are the fields? I’ll have to look the docs again)
+- It is not intuitive (How do I authenticate? How do I read my messages? How do I send a message? I don’t know...)
+- It uses plain dictionaries as the default response, regardless of the number of classes used (What are the fields? I’ll have to look the docs again)
 
 We use Gmail for several automated tasks at Loadsmart, and to overcome these difficulties we developed [gmail-wrapper](https://github.com/loadsmart/gmail-wrapper), a Python library that encapsulates the hard parts of the official SDK and provides an easier API.
-It was a closed project used only internally, and now we decided to bring it open-source, the first Loadsmart open Python package.
+It was a closed project used only internally, but now we decided to make it the first Loadsmart open-sourced Python package.
 Here are some comparisons with the official SDK:
 
 ### Authenticate
@@ -85,11 +85,13 @@ for message in messages:
 
 ### How can I use it?
 
-From the examples you could have a taste of the official SDK difficulties and how a higher-level library can help (I did not even mention [composing](https://developers.google.com/gmail/api/guides/sending#creating_messages) and [replying](https://stackoverflow.com/questions/32589476/how-to-send-a-reply-with-gmail-api/32591614#32591614) messages nor reading attachments).
+From the examples you could have a taste of the official SDK difficulties and how a higher-level library can help (We did not even mention [composing](https://developers.google.com/gmail/api/guides/sending#creating_messages) messages, [replying](https://stackoverflow.com/questions/32589476/how-to-send-a-reply-with-gmail-api/32591614#32591614) to messages, or reading attachments).
 
-If you felt interested you can have a more detailed documentation on GitHub.
+If you are interested in learning more about this package there is detailed documentation on the GitHub repository.
 
-To install, you already guess: `pip install gmail-wrapper`
+To install, you already guess it: `pip install gmail-wrapper`
 
-Of course, Gmail Wrapper has limitations too, like sending emails with attachments or authenticating with non-renewable tokens, for example, but these can be easily addressed by the community.
-So, don’t forget to contribute if you find any bugs or if you think something can be improved, we will be more than happy with your suggestion or pull-request.
+Of course the initial build of Gmail Wrapper has limitations. For example, sending emails with attachments or authenticating with non-renewable tokens are not possible.
+However, these are solvable issues that can easily be addressed by the community.
+So please don’t forget to contribute if you find any bugs or if you think something can be improved!
+We will be more than happy to review your suggestions or pull-requests.
