@@ -51,7 +51,8 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, fields } = markdownRemark
+  const { readingTime } = fields
 
   return (
     <Layout>
@@ -61,7 +62,9 @@ export default function Template({
           <Title>{frontmatter.title}</Title>
           <MetaWrapper>
             <PostAuthor author={frontmatter.author} />
-            <PostDate>{frontmatter.date}</PostDate>
+            <PostDate>
+              {frontmatter.date} • {readingTime.text}
+            </PostDate>
           </MetaWrapper>
           <Text>
             <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -84,6 +87,11 @@ export const pageQuery = graphql`
         title
         comments
         author
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }
