@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import useDarkMode from 'use-dark-mode'
 
 import Title from 'components/Title'
 import PostDate from 'components/PostDate'
@@ -10,42 +11,46 @@ import Layout from 'components/Layout'
 import SEO from 'components/SEO'
 import PostAuthor from 'components/PostAuthor'
 
-import { theme } from 'styles/theme'
+import { fonts } from 'styles/theme'
 
 const PostWrapper = styled.div`
   .gatsby-highlight {
     margin: 10px 0 20px;
-
-    pre {
-      background-color: ${theme.light.colors.secondary};
-    }
   }
 `
 
 const MetaWrapper = styled.div`
   border-bottom: 1px solid #bdc7d0;
-  font-family: ${theme.light.fonts.title};
+  font-family: ${fonts.title};
   padding: 10px 0;
 `
 
-export const UtterancesComments = () => (
-  <section
-    ref={(elem) => {
-      if (!elem) {
-        return
-      }
-      const scriptElem = document.createElement('script')
-      scriptElem.src = 'https://utteranc.es/client.js'
-      scriptElem.async = true
-      scriptElem.crossOrigin = 'anonymous'
-      scriptElem.setAttribute('repo', 'loadsmart/blog')
-      scriptElem.setAttribute('issue-term', 'og:title')
-      scriptElem.setAttribute('label', 'comments')
-      scriptElem.setAttribute('theme', 'github-light')
-      elem.appendChild(scriptElem)
-    }}
-  />
-)
+export const Comments = () => {
+  const darkMode = useDarkMode(false)
+
+  return (
+    <section
+      ref={(elem) => {
+        if (!elem) {
+          return
+        }
+        const scriptElem = document.createElement('script')
+        scriptElem.src = 'https://utteranc.es/client.js'
+        scriptElem.async = true
+        scriptElem.crossOrigin = 'anonymous'
+        scriptElem.setAttribute('repo', 'loadsmart/blog')
+        scriptElem.setAttribute('issue-term', 'og:title')
+        scriptElem.setAttribute('label', 'comments')
+        scriptElem.setAttribute(
+          'theme',
+          darkMode.value ? 'github-dark' : 'github-light'
+        )
+        elem.innerHTML = ''
+        elem.appendChild(scriptElem)
+      }}
+    />
+  )
+}
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -70,7 +75,7 @@ export default function Template({
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </Text>
         </PostWrapper>
-        {frontmatter.comments && <UtterancesComments />}
+        {frontmatter.comments && <Comments />}
       </Section>
     </Layout>
   )
