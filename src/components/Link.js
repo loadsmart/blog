@@ -4,7 +4,7 @@ const Link = styled.a`
   display: block;
   font-size: 20px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 40px;
   padding: 15px 0;
   line-height: 1.5em;

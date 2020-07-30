@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { theme } from 'styles/theme'
+import { fonts } from 'styles/theme'
 import { screen } from 'styles/screen'
 import PostAuthor from './PostAuthor'
 
@@ -18,8 +18,8 @@ const Block = styled.div`
 const Publication = styled(Block)`
   display: inline-block;
   width: 100%;
-  color: #6a7884;
-  font-family: ${theme.light.fonts.title};
+  color: var(--text-primary);
+  font-family: ${fonts.title};
   font-size: 14px;
   letter-spacing: 0;
 
@@ -30,7 +30,6 @@ const Publication = styled(Block)`
 
 const Date = styled.div`
   display: inline-block;
-  color: #1d2124;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0;
@@ -44,7 +43,7 @@ const Date = styled.div`
 `
 
 const Article = styled(Block)`
-  color: #1d2124;
+  color: var(--text-primary);
   display: inline-block;
   width: 100%;
 
@@ -54,11 +53,11 @@ const Article = styled(Block)`
 `
 
 const Title = styled.h1`
-  font-family: ${theme.light.fonts.title};
+  font-family: ${fonts.title};
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 0;
-  line-height: 1em;
+  line-height: 1.5em;
   margin-bottom: 10px;
 
   a {
@@ -68,15 +67,15 @@ const Title = styled.h1`
 
 const Text = styled.p`
   margin: 20px 0 10px 0;
-  font-family: ${theme.light.fonts.text};
+  font-family: ${fonts.text};
   font-size: 17px;
   font-weight: 400;
 `
 
 const ReadMore = styled.a`
-  color: #6a7884;
+  color: var(--text-secondary);
   display: block;
-  font-family: ${theme.light.fonts.title};
+  font-family: ${fonts.title};
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0;

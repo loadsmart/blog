@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { screen } from 'styles/screen'
 
 const Author = styled.div`
-  color: #151b1f;
+  color: var(--text-primary);
   display: inline-block;
 
   font-weight: bold;
