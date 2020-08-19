@@ -118,7 +118,7 @@ const Header = () => (
         </WrapperLogoDesktop>
       </Logo>
       <Links>
-        <a href="https://loadsmart.com/careers/">Carreers</a>
+        <a href="https://loadsmart.com/careers/">Careers</a>
         <a href="https://github.com/loadsmart/">Github</a>
       </Links>
     </Wrapper>
