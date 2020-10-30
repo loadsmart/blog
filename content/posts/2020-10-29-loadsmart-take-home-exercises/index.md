@@ -62,6 +62,6 @@ For Data Scientists, we strongly recommend you to use a notebook to record the a
 Take-home tests are personal, and we ask you not to share it publicly. You can use GitHub private repository for free and share it with us. Another option is that we are going to provide you with a repository to send your test. Sometimes we will resort to old tarballs/zip files. If that is the case, please make sure to check the file twice, making sure you added your solution to the file.
 
 
-That is all! If you follow these suggestions you are going to make our life easier. We will be able to make a fair assessment of your exercise. It will help us reach out to you faster with results. 
+That is all! If you follow these suggestions you are going to make our lives easier. We will be able to make a fair assessment of your exercise. It will help us reach out to you faster with results. 
 
 Did I mention we are hiring? For our principles and values, take a look at https://loadsmart.com/careers/ and for our open positions https://jobs.lever.co/loadsmart/.
