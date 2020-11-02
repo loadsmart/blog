@@ -5,7 +5,7 @@ twitter: flaviotruzzi
 layout: post
 lang: en
 path: /blog/loadsmart-take-home-exercises
-date: '2020-10-29'
+date: '2020-11-02'
 comments: true
 ---
 
