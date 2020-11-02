@@ -45,15 +45,15 @@ Make sure your README.md contains instructions on how to run your code, and how 
 
 ### Explicit requirements
 
-Here at Loadsmart, we mainly use 4 different programming languages. TypeScript and JavaScript for frontend, and Python and Golang for the backend. At this moment, we are not asking for Golang exercises, but that may change in the future. If that happens, please make sure you have your go module setup. For python, make sure you write your requirements.txt (or another control file like pipenv or poetry), and for JavaScript package.json with yarn.lock.
+Here at Loadsmart, we mainly use 4 different programming languages. TypeScript and JavaScript for frontend, Python and Golang for the backend, and Python for data science. At this moment, we are not asking for Golang exercises, but that may change in the future. If that happens, please make sure you have your go module setup. For python, make sure you write your requirements.txt (or another control file like pipenv or poetry), and for JavaScript package.json with yarn.lock.
 
 Fix your dependencies versions, don’t add libraries you don’t use. Using virtual environments also helps. If you know your way around Makefiles, you can add one to help us set up your project.
 
-Also, try to use libraries you know. If you are using something new, try to use the libraries that are mostly used within the community.
+Also, try to use libraries you know. If you are using something new, try to use the libraries that are commonly used within the community.
 
 ### Documentation
 
-Documenting what you have done is paramount. And that also helps us to assess soft skills around communication, which is hard, especially now during COVID when everyone is remote. Be reasonable, don’t exaggerate. We only need to understand what you did and your intentions.
+Documenting what you have done is paramount. And that also helps us to assess soft skills around written communication, which is hard, especially now during COVID when everyone is remote. Be reasonable, don’t exaggerate. We only need to understand what you did and your intentions.
 
 For Data Scientists, we strongly recommend you to use a notebook to record the analysis part of the task. But don’t try to run an HTTP Server from within the notebook. For charts, you can use seaborn’s whitegrid or darkgrid style sets.
 
