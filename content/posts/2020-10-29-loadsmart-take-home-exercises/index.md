@@ -45,7 +45,7 @@ Make sure your README.md contains instructions on how to run your code, and how 
 
 ### Explicit requirements
 
-Here at Loadsmart, we mainly use 3 different programming languages. JavaScript for frontend, and Python and Golang for the backend. At this moment, we are not asking for Golang exercises, but that may change in the future. If that happens, please make sure you have your go module setup. For python, make sure you write your requirements.txt (or another control file like pipenv or poetry), and for JavaScript package.json.
+Here at Loadsmart, we mainly use 4 different programming languages. TypeScript and JavaScript for frontend, and Python and Golang for the backend. At this moment, we are not asking for Golang exercises, but that may change in the future. If that happens, please make sure you have your go module setup. For python, make sure you write your requirements.txt (or another control file like pipenv or poetry), and for JavaScript package.json with yarn.lock.
 
 Fix your dependencies versions, don’t add libraries you don’t use. Using virtual environments also helps. If you know your way around Makefiles, you can add one to help us set up your project.
 
