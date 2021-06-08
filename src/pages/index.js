@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
+import useDarkMode from 'use-dark-mode'
 
 import PostLink from 'components/PostLink'
 import Section from 'components/Section'
@@ -10,6 +11,7 @@ import SEO from 'components/SEO'
 import { screen } from 'styles/screen'
 
 const Wrapper = styled(Section)`
+  background: var(--background);
   ${screen.lg} {
     margin-top: 20px;
   }
@@ -23,6 +25,8 @@ const BlogPage = ({
   const Posts = edges
     .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map((edge) => <PostLink key={edge.node.id} post={edge.node} />)
+
+  useDarkMode(false)
 
   return (
     <Layout>

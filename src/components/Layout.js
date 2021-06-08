@@ -11,21 +11,16 @@ import PropTypes from 'prop-types'
 import 'styles/typography.css'
 import 'styles/layout.css'
 
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
+
+import GlobalStyle from 'components/GlobalStyle'
+import Header from 'components/Header'
 
 import { screen } from 'styles/screen'
-import { theme } from 'styles/theme'
-
-import Header from './Header'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    color: ${theme.light.colors.text}
-  }
-`
+import { fonts } from 'styles/theme'
 
 const Wrapper = styled.div`
-  font-family: ${theme.light.fonts.text};
+  font-family: ${fonts.text};
   padding: 15px 7px 15px 0;
   margin: 0 auto;
   width: 100%;
@@ -47,16 +42,18 @@ const Section = styled.div`
   }
 `
 
-const Layout = ({ children }) => (
-  <div>
-    <GlobalStyle />
+const Layout = ({ children }) => {
+  return (
+    <div>
+      <GlobalStyle />
 
-    <Wrapper>
-      <Header />
-      <Section>{children}</Section>
-    </Wrapper>
-  </div>
-)
+      <Wrapper>
+        <Header />
+        <Section>{children}</Section>
+      </Wrapper>
+    </div>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

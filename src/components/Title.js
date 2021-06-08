@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
-import { theme } from 'styles/theme'
+import { fonts } from 'styles/theme'
 import { screen } from 'styles/screen'
 
 const Title = styled.h1`
-  color: #333;
+  color: var(--text-primary);
   font-style: normal;
-  font-family: ${theme.light.fonts.title};
+  font-family: ${fonts.title};
   font-weight: 900;
   font-size: 25px;
-  line-height: 1em;
+  line-height: 1.5em;
   margin: 0;
 
   ${screen.lg} {

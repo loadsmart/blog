@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Section from './Section'
 import LogoMobile from './LogoMobile'
 import LogoDesktop from './LogoDesktop'
-import { theme } from 'styles/theme'
+import { fonts, sizes } from 'styles/theme'
 import { screen } from 'styles/screen'
 
 const Wrapper = styled(Section)`
@@ -12,8 +12,8 @@ const Wrapper = styled(Section)`
   width: 100%;
 
   ${screen.lg} {
-    max-width: ${theme.light.sizes.max};
-    width: ${theme.light.sizes.default};
+    max-width: ${sizes.max};
+    width: ${sizes.default};
   }
 `
 
@@ -34,8 +34,7 @@ const WrapperLogoMobile = styled.div`
 `
 
 const Nav = styled.nav`
-  background: #e7ebef;
-  color: ${theme.light.colors.primary};
+  color: var(--text-secondary);
   padding: 15px 15px 25px 15px;
   margin: 0 auto;
   text-transform: uppercase;
@@ -52,9 +51,9 @@ const Logo = styled.a`
   width: 40%;
 
   span {
-    color: #6a7884 !important;
+    color: var(--text-seconday) !important;
     display: inline-block;
-    font-family: ${theme.light.fonts.text};
+    font-family: ${fonts.text};
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0;
@@ -90,9 +89,9 @@ const Links = styled.div`
 
   a {
     padding: 0;
-    color: #333b43 !important;
+    color: var(--text-primary);
     display: inline-block;
-    font-family: ${theme.light.fonts.title};
+    font-family: ${fonts.title};
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0;

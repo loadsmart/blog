@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const PostDate = styled.div`
-  color: #1d2124;
+  color: var(--text-primary);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0;

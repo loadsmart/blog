@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { theme } from 'styles/theme'
+import { sizes } from 'styles/theme'
 import { screen } from 'styles/screen'
 
 const Section = styled.div`
@@ -8,8 +8,8 @@ const Section = styled.div`
   width: 100%;
 
   ${screen.lg} {
-    max-width: ${theme.light.sizes.max};
-    width: ${theme.light.sizes.default};
+    max-width: ${sizes.max};
+    width: ${sizes.default};
   }
 `
 

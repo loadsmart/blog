@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-import { theme } from 'styles/theme'
+import { fonts } from 'styles/theme'
 
 const Text = styled.div`
   padding: 15px 0;
   position: relative;
-  color: #1d2124;
+  color: var(--text-content);
   font-size: 17px;
   font-weight: 400;
   line-height: 2em;
@@ -17,7 +17,7 @@ const Text = styled.div`
   h4,
   h5,
   h6 {
-    font-family: ${theme.light.fonts.title};
+    font-family: ${fonts.title};
   }
 `
 
