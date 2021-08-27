@@ -24,6 +24,6 @@ Things that were perfectly working years ago might not be in the present date. P
 
 Another advantage of building this in the open is the social aspect of GitHub and the transparency it creates. Contributions such as new content, fix of typos, and others, can be done through pull requests. If we change how we do things here, one can simply create an issue for discussion and also submit a PR with the updated version of it. 
 
-This is only the beginning of a bigger project. It will keep receiving more content as time passes and we are able to share more and more about us. Feel free to explore the repository in case you want to know more about how we do Engineering @ Loadsmart.
+This is only the beginning of a bigger project. It will keep receiving more content as time passes and we are able to share more and more about ourselves. Feel free to explore the repository in case you want to know more about how we do Engineering @ Loadsmart.
 
 We have many open positions at the moment. Interested? Reach out or check our [careers page](https://loadsmart.com/careers/).
