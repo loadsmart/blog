@@ -22,7 +22,7 @@ When we decided to make this move, there were mainly two goals in mind:
 
 Things that were perfectly working years ago might not be in the present date. Processes, policies, practices, culture. They all change with time. An interesting side-effect of having ours on top of a version control system is that we can see how it evolves historically. Healthy conversations on decisions that will adapt how we work will only move us forward in the direction we want our tech organization to be.
 
-Another advantage of building this in the open is the social aspect of GitHub and the transparency it creates. Contributions such as new content, fix of typos, and others, can be done through pull requests. If we change how we do things here, one can simply create an issue for discussion and also submit a PR with the updated version of it. 
+Another advantage of cataloguing our engineering culture out in the open is that we gain the social aspects of GitHub and the transparency it creates. Contributions such as adding new content, fixing typos, discussing ideas, and others can be done through pull requests. If we change how we do things, one can simply create an issue for discussion and submit a PR with our updated outlook on a topic. 
 
 This is only the beginning of a bigger project. It will keep receiving more content as time passes and we are able to share more and more about ourselves. Feel free to explore the repository in case you want to know more about how we do Engineering @ Loadsmart.
 
