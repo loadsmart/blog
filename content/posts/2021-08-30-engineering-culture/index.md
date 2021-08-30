@@ -8,15 +8,14 @@ path: /blog/our-engineering-culture
 date: 2021-08-30
 comments: true
 ---
-Hello, everyone!
 
 We are happy to announce that today we are making our [engineering culture](https://github.com/loadsmart/culture) **open source**.
 
-There you’ll find several articles describing how we operate as an Engineering organization. Content varies from hiring and onboarding to architecture guidelines and tech stack. This is information that we are already sharing with new members through onboarding sessions and with candidates we reach out to, but this information is generally scattered.
+There you’ll find several articles describing how we operate as an Engineering organization. Content varies from hiring and onboarding to architecture guidelines and tech stack. This is information that we are already sharing with new members through onboarding sessions and with candidates we reach out to, but it is generally scattered.
 
 When we decided to make this move, there were mainly two goals in mind:
 1. Create a single, centralized place for our engineers to look at and remember our main practices (internal alignment)
-2. Show to potential new candidates a bit of our day-to-day work so that, if there’s identification, they might want to join the mothership (external exposure)
+2. Show to potential new candidates a bit of our day-to-day work so that, if they relate to it, they might want to join the mothership (external exposure)
 
 ### VCS and GitHub
 
