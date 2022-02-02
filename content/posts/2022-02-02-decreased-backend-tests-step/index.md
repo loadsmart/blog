@@ -171,3 +171,4 @@ By the end of this Working Group, we could achieve the expected goals: backend t
 Even better than that, we had a great moment to reflect on our practices and raise improvement items.
 
 We have many open positions at the moment. Interested? Reach out or check out the [careers page](https://loadsmart.com/careers/).
+
