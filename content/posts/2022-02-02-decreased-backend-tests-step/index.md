@@ -20,6 +20,8 @@ We had created a Working Group initiative to improve it. This post aims to share
 
 Working Groups are a great format when it comes to solve multi-squad tech debts, as they are short-lived, temporary, diverse, and they are formed to solve a cross-organization issue. Cool, right? Would you like to know more about Loadsmart Engineering culture? [Check it out](https://engineering.loadsmart.com/blog/our-engineering-culture).
 
+In this particular initiative, the team was formed by 3 full-stack engineers, 2 backends end engineers, and 1 one site reliability engineer, all of them from different squads.
+
 ## Goals
 As with all Loadsmart initiatives, it should have clear goals and be based on data to be properly tracked by everyone.
 
@@ -164,9 +166,8 @@ We did not take a look at it because we were already using it.
     Our software evolves as time goes by, such as libraries. Based on this, we should evaluate the tradeoffs of upgrading dependencies.
 
 
-By the end of this Working Group, we could achieve the expected goals.
+By the end of this Working Group, we could achieve the expected goals: backend tests step execution time is about 6 minutes (73% improved).
 
 Even better than that, we had a great moment to reflect on our practices and raise improvement items.
 
 We have many open positions at the moment. Interested? Reach out or check out the [careers page](https://loadsmart.com/careers/).
-
