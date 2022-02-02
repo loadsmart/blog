@@ -9,7 +9,7 @@ date: 2021-08-30
 comments: true
 ---
 
-We are happy to announce that today we are making our [engineering culture](https://github.com/loadsmart/culture) **open source**.
+We are happy to announce that today we are making our [engineering culture](https://github.com/loadsmart/culture) **public**.
 
 There you’ll find several articles describing how we operate as an Engineering organization. Content varies from hiring and onboarding to architecture guidelines and tech stack. This is information that we are already sharing with new members through onboarding sessions and with candidates we reach out to, but it is generally scattered.
 
