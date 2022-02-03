@@ -31,7 +31,7 @@ For this specific effort, we came across the following goals:
     - How to measure: CircleCI backend tests step execution time
 
 - Reduce average time from code-ready to code-deployed by 50%
-    - How to measure: CircleCi backend tests step + QA deploy + Staging deploy + Production deploy
+    - How to measure: CircleCI backend tests step + QA deploy + Staging deploy + Production deploy
 
 
 ## Methodology
