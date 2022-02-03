@@ -1,5 +1,5 @@
 ---
-title: How we decreased backend tests step execution time?
+title: How we decreased the execution time of our backend test suite
 author: Gustavo Rodrigues
 twitter: gustahrodrigues
 layout: post
