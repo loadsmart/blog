@@ -11,7 +11,7 @@ comments: true
 
 At Loadsmart we use [CircleCI](https://circleci.com/) as a pipeline tool to assert the new code’s correctness and ensure high-quality code before integration.
 
-Some time ago we realized that the pipeline for one of our largest codebases was taking about 45min (about 40 or 50), of which 22min was spent to execute the backend test step.
+Some time ago we realized that the pipeline for one of our largest codebases was taking 45min on average to be finished. Of those, 22min running the backend tests only.
 It means that, for each PR, developers should wait for at least 45min to get feedback about their changes, delaying the time to deliver code to production.
 
 We had created a Working Group initiative to improve it. This post aims to share our journey to improve our backend test step execution time.
