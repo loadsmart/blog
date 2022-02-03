@@ -98,7 +98,7 @@ We could confirm it by using [pytest-socket](https://github.com/miketheman/pytes
 - Redis cache calls (port 6389): 11132/15685 test cases
 
 
-Before investing time to fix those mocks, we first disabled all those tests to validate whether it was a valid investment for our time.
+Before investing time to fix those mocks, we first disabled all those tests to validate whether it was a valid investment of our time.
 It proved worth for External API calls and ElasticSearch. For Redis calls, the impact in the codebase would be huge and the time gained would not be worth it.
 
 After mocking properly them, we could have an improvement of 35% by mocking 1,84% tests properly.
