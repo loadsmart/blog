@@ -47,6 +47,7 @@ After having a clear definition of the problem, we started doing some research t
 
 - Hypothesis:
 Based on the results of previous steps, we could gather some hypotheses in the format of "what if...".
+For example, "what if we change the Django default test runner?".
 
 - Experimentation:
 For each hypothesis, we have evaluated the effort to test it. After qualifying it as a valid one, we prototyped it.
@@ -80,8 +81,7 @@ It showed a valid path which was splitting tests to run in parallel. However, br
 
 When we were measuring closer the tests execution time, we realized that the pipeline was taking about 8 minutes to run Django migrations (more than 1400 migration files) since we had a lot of databases and cross-references.
 
-Since we were using [pytest-django](https://pytest-django.readthedocs.io/en/latest/index.html), which takes the current model definition to be used as an in-memory database,
-we could remove the migrations steps.
+Since we were using [pytest-django](https://pytest-django.readthedocs.io/en/latest/index.html), which takes the current model definition to be used as an in-memory database, we could remove the migrations steps.
 
 By removing them, we saw a bunch of tests failing. It turned out that we were using Django migration for data migration too. To fix it, we created several pytest fixtures to provide required data instead of inserting them into the database.
 
@@ -107,7 +107,7 @@ In order to prevent this from happening again, we configured [pytest-socket](htt
 
 4. Upgrade dependencies (including pytest)
 
-When we were adding [pytest-socket](https://github.com/miketheman/pytest-socket), we noticed that most of the project dependencies were outdated.
+When we were adding [pytest-socket](https://github.com/miketheman/pytest-socket), we noticed that some of the project dependencies were outdated.
 Hypothesis: Using the latest project dependencies version could have performance improvements?
 
 It was a huge effort to update them all and make sure that everything was working as expected. For example, by upgrading pytest from version 2 to version 6, we had to change some decorator orders, like `@freeze_time` needed to be placed after the `@pytest.fixture` decorator.
@@ -120,7 +120,7 @@ After all these tentatives, we went back to the initial investigation results. B
 
 CircleCI provides the option to split tests by timing, which was exactly what we were looking for. By doing so, we had our big moment: the test step decreased from about 22m to 6m.
 
-However, Coveralls started failing, since each job had a portion of coverage data. We had to combine multiple coverage files into a single one:
+However, [Coveralls](https://coveralls.io/) started failing, since each job had a portion of coverage data. We had to combine multiple coverage files into a single one:
 
 ```yaml
     # ...
@@ -162,12 +162,11 @@ In this particular large codebase, we had several tech debts that were found by 
 
 - Try to keep dependencies as updated as possible
 
-    Our software evolves as time goes by, such as libraries. Based on this, we should evaluate the tradeoffs of upgrading dependencies.
+    Our software evolves as time goes by, such as libraries. Based on this, we should constantly evaluate the tradeoffs of upgrading dependencies.
 
 
 By the end of this Working Group, we achieved our expected goals: backend tests step execution time running in about 6 minutes (73% of improvement).
 
 Even better than that, we had a great moment to reflect on our practices and raise improvement items.
 
-We have many open positions at the moment. Interested? Reach out or check out the [careers page](https://loadsmart.com/careers/).
-
+Like to solve challenges like this one? We have many open positions at the moment. Check out our [engineering culture](https://github.com/loadsmart/culture) and the [careers page](https://loadsmart.com/careers/).
