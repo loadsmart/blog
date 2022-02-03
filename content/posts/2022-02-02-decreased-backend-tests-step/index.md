@@ -14,7 +14,7 @@ At Loadsmart we use [CircleCI](https://circleci.com/) as a pipeline tool to asse
 Some time ago we realized that the pipeline for one of our largest codebases was taking 45min on average to be finished. Of those, 22min running the backend tests only.
 It means that, for each PR, developers would wait around 45min to get feedback on their changes, delaying the time to deliver code to production.
 
-We had created a Working Group initiative to improve it. This post aims to share our journey to improve our backend test step execution time.
+We have decided to create a Working Group to improve this. This post aims to share our journey to reduce the total execution time of our backend tests.
 
 ## What is a Working Group?
 
