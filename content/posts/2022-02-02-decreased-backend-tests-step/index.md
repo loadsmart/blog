@@ -89,7 +89,7 @@ By the end of this step, we could get an improvement of 8 minutes in the total p
 
 3. Blocking external calls
 
-Our code had a lot of dependencies with external services. During the previous tests investigations, we realized that some of them were not properly mocked the external calls.
+Our code had a lot of dependencies with external services. During the previous test investigations, we realized that some of them were not properly mocking those external calls.
 
 We could confirm it by using [pytest-socket](https://github.com/miketheman/pytest-socket). We had 3 different types of external calls:
 
