@@ -166,7 +166,7 @@ In this particular large codebase, we had several tech debts that were found by 
     Our software evolves as time goes by, such as libraries. Based on this, we should evaluate the tradeoffs of upgrading dependencies.
 
 
-By the end of this Working Group, we could achieve the expected goals: backend tests step execution time is about 6 minutes (73% improved).
+By the end of this Working Group, we achieved our expected goals: backend tests step execution time running in about 6 minutes (73% of improvement).
 
 Even better than that, we had a great moment to reflect on our practices and raise improvement items.
 
