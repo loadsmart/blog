@@ -153,7 +153,7 @@ We did not take a look at it because we were already using it.
 
 - Tech debts should not be ignored and fixes are WORTH the investment.
 
-    In this particular large codebase, we had several tech debts raised by this Working Group. Some of them we could fix, but it was something we as engineers should keep our eyes open to avoid it existing for that long. As time goes by, it may become costly to pay.
+In this particular large codebase, we had several tech debts that were found by this Working Group. Some of them we were able to fix, but this is something we as engineers should keep our eyes on, to avoid it existing for that long. As time goes by, it may become costly to pay those debts.
 
 - Test levels
 
