@@ -99,7 +99,7 @@ We could confirm it by using [pytest-socket](https://github.com/miketheman/pytes
 
 
 Before investing time to fix those mocks, we first disabled all those tests to validate whether it was a valid investment of our time.
-It proved worth for External API calls and ElasticSearch. For Redis calls, the impact in the codebase would be huge and the time gained would not be worth it.
+External API and ElasticSearch calls proved to be worth the investment. For Redis calls, the impact in the codebase could be huge and the reduction in time we would get wouldn't be significant.
 
 After mocking properly them, we could have an improvement of 35% by mocking 1,84% tests properly.
 
