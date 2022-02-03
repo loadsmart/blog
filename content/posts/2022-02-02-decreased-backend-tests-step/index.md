@@ -28,7 +28,7 @@ As with all Loadsmart initiatives, it should have clear goals and be based on da
 For this specific effort, we came across the following goals:
 
 - Reduce average execution time of backend tests by 50%
-    - How to measure: CircleCi backend tests step execution time
+    - How to measure: CircleCI backend tests step execution time
 
 - Reduce average time from code-ready to code-deployed by 50%
     - How to measure: CircleCi backend tests step + QA deploy + Staging deploy + Production deploy
