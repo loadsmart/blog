@@ -157,7 +157,7 @@ In this particular large codebase, we had several tech debts that were found by 
 
 - Test levels
 
-    We should be careful about different test levels. We should be aware of [Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) to have a clear definition of the test boundaries. Should it mock external dependencies? Should we validate all integrated?
+    We should be careful about different test levels. We should be aware of the [Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) to have a clear definition of the test boundaries. Should it mock external dependencies? Should we test things altogether (integration tests)?
 
     Automated tests with external dependencies are slower than others. That is why it is really important to have a clear and well-defined Quality Strategy. What are the tools, practices, and processes we have to make sure that we are delivering good code?
 
