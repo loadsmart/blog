@@ -103,7 +103,7 @@ External API and ElasticSearch calls proved to be worth the investment. For Redi
 
 After properly mocking them, we could see an improvement of 35% in time by mocking 1.84% of the tests.
 
-In order to prevent it to happen again, we left [pytest-socket](https://github.com/miketheman/pytest-socket) properly configured in our codebase.
+In order to prevent this from happening again, we configured [pytest-socket](https://github.com/miketheman/pytest-socket) in our codebase.
 
 4. Upgrade dependencies (including pytest)
 
