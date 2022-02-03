@@ -9,9 +9,9 @@ date: 2022-02-02
 comments: true
 ---
 
-At Loadsmart we use [CircleCI](https://circleci.com/) as a pipeline tool to assert the new code’s correctness and ensure high-quality code before integration.
+At Loadsmart, we use [CircleCI](https://circleci.com/) as a pipeline tool to assert the new code’s correctness and ensure high-quality code before integration.
 
-Some time ago we realized that the pipeline for one of our largest codebases was taking 45min on average to be finished. Of those, 22min running the backend tests only.
+Some time ago, we realized that the pipeline for one of our largest codebases was taking 45min on average to be finished. Of those, 22min running the backend tests only.
 It means that, for each PR, developers would wait around 45min to get feedback on their changes, delaying the time to deliver code to production.
 
 We have decided to create a Working Group to improve this. This post aims to share our journey to reduce the total execution time of our backend tests.
@@ -20,7 +20,7 @@ We have decided to create a Working Group to improve this. This post aims to sha
 
 Working Groups are a great format when it comes to solve multi-squad tech debts, as they are short-lived, temporary, diverse, and they are formed to solve a cross-organization issue. Cool, right? Would you like to know more about Loadsmart Engineering culture? [Check it out](https://engineering.loadsmart.com/blog/our-engineering-culture).
 
-In this particular initiative, the team was formed by 3 full-stack engineers, 2 backend engineers, and 1 site reliability engineer. All of them from different squads.
+In this initiative, the team was formed by three full-stack engineers, two backend engineers, and one site reliability engineer. All of them from different squads.
 
 ## Goals
 As with all Loadsmart initiatives, it should have clear goals and be based on data to be properly tracked by everyone.
@@ -53,7 +53,7 @@ For each hypothesis, we have evaluated the effort to test it. After qualifying i
 We did it for a minimal set of changes enabling an initial evaluation. Our goal here was to change minimal and get the max result possible.
 
 - Results and conclusions:
-Once we had a prototype working as expected, we started gathering data for it. If it showed good results, we could invest more effort in it.
+Once we had a prototype working as expected, we started gathering data. If it showed promising results, we could invest more effort in it.
 
 ## Actions and Results
 
@@ -65,7 +65,7 @@ As a baseline, we considered the total execution time for the backend test step:
 
 We had a bunch of tests spread through several Django apps.
 
-We came up with the following hypothesis: What if we could split the faster/slower apps into different jobs?
+We came up with the following hypothesis: What if we split the faster/slower apps into different jobs?
 
 We started by measuring the execution time for each Django app. Then, we created manually 2 test jobs: the first would have the slowest tests and the second would have the fastest. We tried to split it equally based on total execution time, ie, the second job with faster tests would have more tests than the first.
 
@@ -74,7 +74,7 @@ We got the following results showing an improvement of about 7 minutes
 - Job 1 - 14 min 35 s
 - Job 2 - 14 min 15 s
 
-It showed a valid path which was splitting tests to run in parallel. However, the solution to split them into multiple jobs was not feasible, since we'd keep adding more and more tests daily.
+It showed a valid path which was splitting tests to run in parallel. However, breaking them into multiple jobs was not feasible, since we'd keep adding more and more tests daily.
 
 2. No migration before backend tests steps
 
@@ -146,8 +146,7 @@ However, Coveralls started failing, since each job had a portion of coverage dat
 ### Bonus action:
 
 CircleCI also provides a great feature to [cache the docker layer](https://circleci.com/docs/2.0/docker-layer-caching/). It may give you some more time improvements.
-We did not take a look at it because we were already using it.
-
+In our case, we were already using it.
 
 ## Lessons learned
 
