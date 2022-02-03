@@ -74,7 +74,7 @@ We got the following results showing an improvement of about 7 minutes
 - Job 1 - 14 min 35 s
 - Job 2 - 14 min 15 s
 
-It showed a valid path which was splitting tests to run in parallel. However, the solution to split them into multiple jobs was not feasible, since we're keeping adding more and more tests daily.
+It showed a valid path which was splitting tests to run in parallel. However, the solution to split them into multiple jobs was not feasible, since we'd keep adding more and more tests daily.
 
 2. No migration before backend tests steps
 
