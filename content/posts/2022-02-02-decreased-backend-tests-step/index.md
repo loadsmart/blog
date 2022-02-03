@@ -20,7 +20,7 @@ We have decided to create a Working Group to improve this. This post aims to sha
 
 Working Groups are a great format when it comes to solve multi-squad tech debts, as they are short-lived, temporary, diverse, and they are formed to solve a cross-organization issue. Cool, right? Would you like to know more about Loadsmart Engineering culture? [Check it out](https://engineering.loadsmart.com/blog/our-engineering-culture).
 
-In this particular initiative, the team was formed by 3 full-stack engineers, 2 backends end engineers, and 1 one site reliability engineer, all of them from different squads.
+In this particular initiative, the team was formed by 3 full-stack engineers, 2 backend engineers, and 1 site reliability engineer. All of them from different squads.
 
 ## Goals
 As with all Loadsmart initiatives, it should have clear goals and be based on data to be properly tracked by everyone.
