@@ -116,7 +116,7 @@ By the end of this effort, we could not see any performance improvement. However
 
 5. Running tests in parallel
 
-After all those tentatives, we tried to back to the initial investigation results. By looking at CircleCI documentation, we found the feature of [running tests in parallel](https://circleci.com/docs/2.0/parallelism-faster-jobs/).
+After all these tentatives, we went back to the initial investigation results. By looking at CircleCI documentation, we found the feature of [running tests in parallel](https://circleci.com/docs/2.0/parallelism-faster-jobs/).
 
 CircleCI provides the option to split tests by timing, which was exactly what we were looking for. By doing so, we had our big moment: the test step decreased from about 22m to 6m.
 
