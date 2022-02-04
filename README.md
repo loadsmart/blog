@@ -45,4 +45,4 @@ Found a typo or want to help us with any of the [open tickets](https://github.co
 
 ## License
 
-This project is distributed under the [MIT](https://raw.githubusercontent.com/loadsmart/blog/master/LICENSE) License.
+This code project is distributed under the [MIT](https://raw.githubusercontent.com/loadsmart/blog/master/LICENSE) License. The articles are distributed under Creative Commons 4.0 International.
