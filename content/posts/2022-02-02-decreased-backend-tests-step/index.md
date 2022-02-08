@@ -18,7 +18,7 @@ We have decided to create a Working Group to improve this. This post aims to sha
 
 ## What is a Working Group?
 
-Working Groups are a great format when it comes to solve multi-squad tech debts, as they are short-lived, temporary, diverse, and they are formed to solve a cross-organization issue. Cool, right? Would you like to know more about Loadsmart Engineering culture? [Check it out](https://engineering.loadsmart.com/blog/our-engineering-culture).
+[Working Groups](https://github.com/loadsmart/culture/blob/main/practices/working-groups.md) are a great format when it comes to solve multi-squad tech debts, as they are short-lived, temporary, diverse, and they are formed to solve a cross-organization issue. Cool, right? Would you like to know more about Loadsmart Engineering culture? [Check it out](https://engineering.loadsmart.com/blog/our-engineering-culture).
 
 In this initiative, the team was formed by three full-stack engineers, two backend engineers, and one site reliability engineer. All of them from different squads.
 
