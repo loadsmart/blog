@@ -13,7 +13,7 @@ comments: true
 
 At Loadsmart, the [hiring process](https://github.com/loadsmart/culture/blob/main/hiring/interviewing.md) consists of four steps:
 A screening interview, with one of our recruiters, a coding exercise, done through HackerRank, a system’s design interview, and, finally, a soft-skills interview.
-But what to expect from a system’s design interview, and how to succeed on it?
+But what to expect from a system’s design interview, and how to succeed at it?
 First of all, the system’s design, also known as the “architectural” interview has slightly different formats depending on the position you are applying for.
 It will, however, always require you as a candidate to explain how you would approach a given problem, proposing a solution and then iterating over it as more requirements or variables are added.
 It usually comes with a whiteboard so you can visually explain your thoughts and keep track of what you’ve built so far.
