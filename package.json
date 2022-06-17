@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Loadsmart Engineering <engineering@loadsmart.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^2.23.1",
     "gatsby-alias-imports": "^1.0.4",
     "gatsby-cli": "^2.12.44",
