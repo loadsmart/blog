@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: blog
+  description: Loadsmart Engineering Blog
+  annotations:
+    github.com/project-slug: loadsmart/blog
+  tags:
+    - javascript
+spec:
+  type: other
+  lifecycle: production
+  owner: barbosa
