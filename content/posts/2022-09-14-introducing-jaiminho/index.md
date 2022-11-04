@@ -5,11 +5,11 @@ twitter: LoadsmartEng
 layout: post
 lang: en
 path: /blog/introducing-jaiminho
-date: 2022-09-14
+date: 2022-11-25
 comments: true
 ---
 
-At Loadsmart, many of our services are organized within an event-driven architecture and face some usual challenges that come with such an architecture. One of them is **dual writes**, which happens when an application has to change data on two different places. A common example of dual writes is an application that needs to store data on a database and notify that change by emitting an event which may be consumed by different services. The inherent issue with this scenario is that if one of these two operations fails, the producer and consumer applications will have data inconsistencies, because the consumer never received the event informing the database change.
+At Loadsmart, many of our services are organized within an event-driven architecture and face some usual challenges that come with such an architecture. One of them is **dual writes**, which happens when an application has to change data on two different places. A common example of dual writes is an application that needs to store data on a database and notify that change by emitting an event which may be consumed by different services. The inherent issue with this scenario is that if one of these two operations fails, the producer and consumer applications will have data inconsistencies. If we choose to write the change to the database first and then notify the event, in the case of a notification failure the database would have the updated data and the consumer wouldn’t. If we reverse it (i.e. notifying first and then storing), a failure when committing the transaction in the database would cause the consumer receiving data that isn’t on the application database.
 
 There are well-known methods to deal with such issues, and we chose to apply the transactional outbox pattern. Since we couldn’t find any related solution on [Django community](https://djangopackages.org/search/?q=outbox), we decided to implement an open-source library called [Jaiminho](https://github.com/loadsmart/jaiminho), which is a broker agnostic implementation of the outbox pattern.
 
@@ -20,12 +20,12 @@ For simplicity purposes, let’s assume the common case of an application that h
 
 - Outbox table
 
-When storing a record to the database, the corresponding event should be persisted into an outbox table, and both inserts should be in the same transaction. With this strategy we can leverage the atomicity property of relational databases transactions to ensure either both or no inserts will be successful.
+When storing a record to the database, the corresponding event should be persisted into an outbox table, and both operations should be in the same transaction. With this strategy we can leverage the atomicity property of relational databases transactions to ensure either both or no inserts will be successful.
 
 - Message relay
 
 The outbox table is guaranteed to have all events that should be notified, so we just have to ensure that they are really sent. This responsibility goes to the message relay, which will publish all events in the table to the stream and mark them as sent.
-Note: Since the message relay has to send an event and then mark it as sent, that characterizes another dual write, because if the relay fails to update the status after sending the event, it will be sent again on the next execution. So, to ensure no duplicated events are delivered, the message consumers must implement idempotence on their side.
+Note: Since the message relay has to send an event and then mark it as sent, that characterizes another dual write, because if the relay fails to update the status after sending the event, it will be sent again on the next execution. So, to ensure no duplicated events are consumed, the message consumers must implement idempotence on their side.
 
 # Using Jaiminho in your project
 
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 JAIMINHO_CONFIG = {
     "PERSIST_ALL_EVENTS": False,
     "DELETE_AFTER_SEND": True,
-    "PUBLISH_STRATEGY: "publish-on-commit"
+    "PUBLISH_STRATEGY: "keep-order"
     }
 ```
 
@@ -100,15 +100,15 @@ This strategy will always execute the decorated function after the current trans
 
 Besides the publish strategies, there are two other options that can be configured:
 
-### PERSIST_ALL_EVENTS
+### Persist all events
 
 While the default behavior of Jaiminho makes losing an event less likely, it still has a point of failure: if the notifying method fails and Jaiminho receives an error trying to store the database entry, the event will be lost. In order to avoid this possibility, the `PERSIST_ALL_EVENTS` configuration can be set to True, which will save the database entry *before* trying to notify the event. In this case, the notifying method will be called when the database transaction is committed, which will ensure that the event is persisted. This is not applicable when the publish strategy is **Keep order**, because all the messages must be stored to achieve this strategy.
 
-### DELETE_AFTER_SEND
+### Delete after send
 
 The `PERSIST_ALL_EVENTS` configuration can be combined with the `DELETE_AFTER_SEND` one. If `DELETE_AFTER_SEND` is activated, after a successful notifying of the event, the persisted database entry will be deleted, in order to make sure Jaiminho will not store successfully sent events.
 
-You may be asking: why isn’t the `PERSIST_ALL_EVENTS` configuration the default behavior of Jaiminho? The reason behind it is performance. For each event sent, the activation of this setting will cause two extra database operations (one insertion and one deletion), which can be a lot for use cases where there is a large number of events being sent. So, it’s up to your use case and you to decide whether you prefer the performance of just going to the database if something fails or the consistency guarantee of not losing any events.
+You might be wondering: why isn’t the `PERSIST_ALL_EVENTS` configuration the default behavior of Jaiminho? The reason behind it is performance. For each event sent, the activation of this setting will cause two extra database operations (one insertion and one deletion), which can be a lot for use cases where there is a large number of events being sent. So, it’s up to your use case and you to decide whether you prefer the performance of just going to the database if something fails or the consistency guarantee of not losing any events.
 
 ## Django Commands
 
@@ -116,9 +116,12 @@ Jaiminho comes with two Django Commands that can be useful:
 
 ### Event Relaying
 
-The Event Relaying Command will query the database for all events that were not sent in a given timebox and will try to re-send them using the original method, message and kwargs. Note that if the event relay runs after a deploy that changed or removed the original method, it will not be able to re-send the failed events and they will have to be dealt with manually. Also, the `DELETE_AFTER_SEND` configuration also applies to this command.
+The Event Relaying command will query the database for all events that were not sent in a given timebox and will try to re-send them using the original method, message and kwargs. Note that if the event relay runs after a deploy that changed or removed the original method, it will not be able to re-send the failed events and they will have to be dealt with manually. Also, the `DELETE_AFTER_SEND` configuration also applies to this command.
 
-Tip: Schedule this command to be regularly executed and Jaiminho will ensure all failed events are re-sent.
+To ensure all failed events are re-sent by Jaiminho, you have two options with the Event Relaying command:
+
+- Schedule it to be regularly executed (with a cronjob, for example)
+- Run it in a loop using the `--run_in_loop` and `--loop_interval` flags
 
 ### Event Cleaning
 
