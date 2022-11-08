@@ -27,50 +27,6 @@ When storing a record to the database, the corresponding event should be persist
 The outbox table is guaranteed to have all events that should be notified, so we just have to ensure that they are really sent. This responsibility goes to the message relay, which will publish all events in the table to the stream and mark them as sent.
 Note: Since the message relay has to send an event and then mark it as sent, that characterizes another dual write, because if the relay fails to update the status after sending the event, it will be sent again on the next execution. So, to ensure no duplicated events are consumed, the message consumers must implement idempotence on their side.
 
-# Using Jaiminho in your project
-
-To add Jaiminho to your project, you have to:
-
-1) Install it:
-
-```console
-python -m pip install jaiminho
-```
-
-2) Add it to the Django project’s `INSTALLED_APPS`:
-
-```python
-INSTALLED_APPS = [
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    ...
-    ...
-    ...
-    "jaiminho"
-]
-```
-
-3) Configure the options in the project’s Django `settings.py`:
-
-```python
-JAIMINHO_CONFIG = {
-    "PERSIST_ALL_EVENTS": False,
-    "DELETE_AFTER_SEND": True,
-    "PUBLISH_STRATEGY: "keep-order"
-    }
-```
-
-4) Add the `@save_to_outbox` decorator to any method responsible for communicating with external systems (brokers, external APIs, etc):
-
-```python
-from jaiminho.send import save_to_outbox
-
-@save_to_outbox
-def any_external_call(**kwargs):
-    # do something
-    return
-```
-
 
 # How Jaiminho works
 
@@ -121,7 +77,7 @@ The Event Relaying command will query the database for all events that were not 
 To ensure all failed events are re-sent by Jaiminho, you have two options with the Event Relaying command:
 
 - Schedule it to be regularly executed (with a cronjob, for example)
-- Run it in a loop using the `--run_in_loop` and `--loop_interval` flags
+- Run it in a loop using the `run_in_loop` and `loop_interval` flags
 
 ### Event Cleaning
 
@@ -133,6 +89,58 @@ Jaiminho emits two Django signals, which can be used, for example, for collectin
 
 - `event_publish` : emitted when an event is successfully sent
 - `event_failed_to_published` : emitted when an event failed to be sent
+
+# Using Jaiminho in your project
+
+To add Jaiminho to your project, you have to:
+
+1) Install it:
+
+```console
+python -m pip install jaiminho
+```
+
+2) Add it to the Django project’s `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    ...
+    ...
+    ...
+    "jaiminho"
+]
+```
+
+3) Configure the options in the project’s Django `settings.py`:
+
+```python
+JAIMINHO_CONFIG = {
+    "PERSIST_ALL_EVENTS": False,
+    "DELETE_AFTER_SEND": True,
+    "PUBLISH_STRATEGY: "keep-order"
+    }
+```
+
+4) Apply Jaiminhos migrations in order to create the event database table:
+
+```console
+python manage.py migrate
+```
+
+
+5) Add the `@save_to_outbox` decorator to any method responsible for communicating with external systems (brokers, external APIs, etc):
+
+```python
+from jaiminho.send import save_to_outbox
+
+@save_to_outbox
+def any_external_call(**kwargs):
+    # do something
+    return
+```
+
 
 # Final remarks 
 
