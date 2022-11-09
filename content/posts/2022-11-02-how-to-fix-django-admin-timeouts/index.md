@@ -17,7 +17,7 @@ This kind of issue should be uncommon in small, earlier projects. However, if it
 
 ### Use `readonly_fields`
 
-In this situation, the easy solution would be to just set those fields as `readonly_fields` in the page definition, like [this](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.readonly_fields).
+In this situation, the easiest solution would be to just set those fields as [`readonly_fields`](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.readonly_fields) in the page definition.
 
 ```python
 class CustomAdmin(admin.ModelAdmin):
@@ -34,7 +34,7 @@ If having a foreign key as an editable field on the admin is a must for your use
 
 ### Use `raw_id_fields`
 
-Setting the field as a raw id field still allow its editing as just the id value of the related entity, like [this](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.raw_id_fields):
+Setting the field as a [raw id field](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.raw_id_fields) still allows its editing as just the id value of the related entity:
 
 ```python
 class CustomAdmin(admin.ModelAdmin):
@@ -47,7 +47,7 @@ It will render an input field on the admin with the possibility of opening a pop
 
 ### Use custom filters
 
-Filtering its queryset to a smaller, more specific, set of instances, like [this](https://code.djangoproject.com/ticket/28311):
+Filtering its queryset to a smaller, more specific, set of instances, like the example mentioned in [Django ticket #28311](https://code.djangoproject.com/ticket/28311):
 
 ```python
 class CustomForm(forms.ModelForm):
