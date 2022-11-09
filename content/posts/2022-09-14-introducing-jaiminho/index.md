@@ -123,7 +123,7 @@ JAIMINHO_CONFIG = {
     }
 ```
 
-4) Apply Jaiminhos migrations in order to create the event database table:
+4) Apply Jaiminho’s migrations in order to create the event database table:
 
 ```console
 python manage.py migrate
@@ -141,6 +141,11 @@ def any_external_call(**kwargs):
     return
 ```
 
+6) Now, to complete the flow, don’t forget to configure the Event Relayer to run according to your needs. For example, a simple way to set it to run every 15 seconds:
+
+```console
+python3 manage.py events_relay loop_interval 15
+```
 
 # Final remarks 
 
