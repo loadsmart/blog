@@ -147,7 +147,7 @@ def any_external_call(**kwargs):
 6) Now, to complete the flow, don’t forget to configure the Event Relayer to run according to your needs. For example, a simple way to set it to run every 15 seconds:
 
 ```console
-python3 manage.py events_relay loop_interval 15
+python manage.py events_relay loop_interval 15
 ```
 
 # Final remarks 
