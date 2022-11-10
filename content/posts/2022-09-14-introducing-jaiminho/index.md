@@ -16,6 +16,9 @@ There are well-known methods to deal with such issues, and we chose to apply the
 
 # The Transactional outbox pattern
 
+![outbox](./outbox.png)
+
+
 For simplicity purposes, let’s assume the common case of an application that has to save data to a database and notify it to an event stream. The idea behind the transactional outbox pattern is combining both writes into a single atomic transaction, which guarantees that if one of them fails, the entire transaction fails, avoiding inconsistent scenarios; in this case, it means that if a record is persisted into the database, it is guaranteed to be notified to the stream. The pattern achieves this goal by introducing two concepts:
 
 - Outbox table
