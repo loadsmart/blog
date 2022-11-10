@@ -25,10 +25,10 @@ For simplicity purposes, let’s assume the common case of an application that h
 
 When storing a record to the database, the corresponding event should be persisted into an outbox table, and both operations should be in the same transaction. With this strategy we can leverage the atomicity property of relational databases transactions to ensure either both or no inserts will be successful.
 
-- Message relay
+- Message relayer
 
-The outbox table is guaranteed to have all events that should be notified, so we just have to ensure that they are really sent. This responsibility goes to the message relay, which will publish all events in the table to the stream and mark them as sent.
-Note: Since the message relay has to send an event and then mark it as sent, that characterizes another dual write, because if the relay fails to update the status after sending the event, it will be sent again on the next execution. So, to ensure no duplicated events are consumed, the message consumers must implement idempotence on their side.
+The outbox table is guaranteed to have all events that should be notified, so we just have to ensure that they are really sent. This responsibility goes to the message relayer, which will publish all events in the table to the stream and mark them as sent.
+Note: Since the message relay has to send an event and then mark it as sent, that characterizes another dual write, because if the relayer fails to update the status after sending the event, it will be sent again on the next execution. So, to ensure no duplicated events are consumed, the message consumers must implement idempotence on their side.
 
 
 # How Jaiminho works
