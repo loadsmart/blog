@@ -47,7 +47,7 @@ It will render an input field on the admin with the possibility of opening a pop
 
 ### Use custom filters
 
-Filtering its queryset to a smaller, more specific, set of instances, like the example mentioned in [Django ticket #28311](https://code.djangoproject.com/ticket/28311):
+Filtering a queryset to a smaller, more specific set of instances, like the example mentioned in [Django ticket #28311](https://code.djangoproject.com/ticket/28311) could also help speed up Admin pages:
 
 ```python
 class CustomForm(forms.ModelForm):
