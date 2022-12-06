@@ -43,7 +43,7 @@ class CustomAdmin(admin.ModelAdmin):
     )
 ```
 
-It will render an input field on the admin with the possibility of opening a popup to search for the desired instance;
+It will render an input field on the admin with the possibility of opening a popup to search for the desired instance
 
 ### Use custom filters
 
