@@ -58,7 +58,6 @@ class CustomForm(forms.ModelForm):
     def _get_field_queryset(self):
         return SomeField.objects.filter(...)
 
-
 class CustomAdmin(admin.ModelAdmin):
     form = CustomForm
 ```
