@@ -9,7 +9,7 @@ date: 2022-11-25
 comments: true
 ---
 
-At Loadsmart, many of our services are organized within an event-driven architecture and face some usual challenges that come with such an architecture. One of them is **dual writes**, which happens when an application has to change data on two different places. A common example of dual writes is an application that needs to store data on a database and notify that change by emitting an event which may be consumed by different services. The inherent issue with this scenario is that if one of these two operations fails, the producer and consumer applications will have data inconsistencies. If we choose to write the change to the database first and then notify the event, in the case of a notification failure the database would have the updated data and the consumer wouldn’t. If we reverse it (i.e. notifying first and then storing), a failure when committing the transaction in the database would cause the consumer receiving data that isn’t on the application database.
+At Loadsmart, many of our services are organized within an event-driven architecture and face some usual challenges that come with such an architecture. One of them is **dual writes**, which happens when an application has to write data on two different places. A common example of dual writes is an application that needs to store data on a database and notify that change by emitting an event which may be consumed by different services. The inherent issue with this scenario is that if one of these two operations fails, the producer and consumer applications will have data inconsistencies. If we choose to write the change to the database first and then notify the event, in the case of a notification failure the database would have the updated data and the consumer wouldn’t. If we reverse it (i.e. notifying first and then storing), a failure when committing the transaction in the database would cause the consumer receiving data that isn’t on the application database.
 
 There are well-known methods to deal with such issues, and we chose to apply the transactional outbox pattern. Since we couldn’t find any related solution on [Django community](https://djangopackages.org/search/?q=outbox), we decided to implement an open-source library called [Jaiminho](https://github.com/loadsmart/jaiminho), which is a broker agnostic implementation of the outbox pattern.
 
@@ -47,9 +47,9 @@ Since the message and kwargs are serialized into bytes, any type of message is s
 
 With Jaiminho, you can choose between the following two publish strategies, using the `PUBLISH_STRATEGY` configuration:
 
-### Keep Order 
-This strategy is similar to the transactional outbox [described by Chris Richardson](https://microservices.io/patterns/data/transactional-outbox.html). The decorated function intercepts the function call and saves it on local DB to be executed later. A separate event relayer will keep polling local DB and executing those functions in the same order it was stored. 
-Be careful with this approach, **if any execution fails, the relayer will get stuck**. Otherwise, it would not possible to guarantee delivery order.  
+### Keep Order
+This strategy is similar to the transactional outbox [described by Chris Richardson](https://microservices.io/patterns/data/transactional-outbox.html). The decorated function intercepts the function call and saves it on local DB to be executed later. A separate event relayer will keep polling local DB and executing those functions in the same order it was stored.
+Be careful with this approach, **if any execution fails, the relayer will get stuck**. Otherwise, it would not possible to guarantee delivery order.
 
 ### Publish on commit
 
@@ -150,6 +150,6 @@ def any_external_call(**kwargs):
 python manage.py events_relay loop_interval 15
 ```
 
-# Final remarks 
+# Final remarks
 
 If you are interested in learning more, there is a detailed documentation on the [GitHub repository](https://github.com/loadsmart/jaiminho). Also, contributions are more than welcome! Feel free to contribute if you find any bugs or have any suggestions.
