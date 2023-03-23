@@ -5,6 +5,7 @@ metadata:
   description: Loadsmart Engineering Blog
   annotations:
     github.com/project-slug: loadsmart/blog
+    opslevel.com/tier: tier_4
   tags:
     - javascript
 spec:
