@@ -35,7 +35,7 @@ After extensive research and careful review, Elastic Cloud checked the right box
 ✅ A fully managed service maintained by the core developers of Elasticsearch
 Supported by [public benchmarks](https://www.elastic.co/blog/elasticsearch-opensearch-performance-gap), there’s a clear and significant performance gap between Elasticsearch and OpenSearch, particularly at scale.
 
-✅ OpenSearch only seemed cheaper because we ran it on a legacy Elasticsearch engine; moving to the official fork would roughly double resource needs, an 8 GB Elastic cloud node would need about 16 GB on OpenSearch, erasing any savings, as Elastic Cloud’s [pricing calculator](https://cloud.elastic.co/pricing) confirms.
+✅ OpenSearch only seemed cheaper because we ran it on a legacy Elasticsearch engine; moving to the official fork would roughly double resource needs, an 8 GB Elastic Cloud node would need about 16 GB on OpenSearch, erasing any savings, as Elastic Cloud’s [pricing calculator](https://cloud.elastic.co/pricing) confirms.
 
 
 # How We Made It Happen
@@ -48,9 +48,9 @@ The Platform team engaged with the Product Engineering teams, set shared expecta
 
 ## Automation and Safety First
 
-The migration strategy emphasized automation and rollback. We used [Elastic Curator](https://github.com/elastic/curator) to take hourly [snapshots](https://www.elastic.co/docs/deploy-manage/tools/snapshot-and-restore) and built robust Python workflows for restoration, validation, and data consistency checks.
+The migration strategy emphasized automation and rollback capabilities. We used [Elastic Curator](https://github.com/elastic/curator) to take hourly [snapshots](https://www.elastic.co/docs/deploy-manage/tools/snapshot-and-restore) and built robust Python workflows for restoration, validation, and data consistency checks.
 
-Instead of manual checks, we built automated validations to compare document counts, field mappings, and shard layouts across clusters. Although Elasticsearch snapshots already ensure consistency, we added these extra controls to catch any writes that might slip in during the cut over. If anything was off, our pre-migration snapshots were ready for a rollback–a safety we didn’t end up needing, but one that gave us confidence throughout the process.
+Instead of manual checks, we built automated validations to compare document counts, field mappings, and shard layouts across clusters. Although Elasticsearch snapshots already ensure consistency, we added these extra controls to catch any writes that might slip in during the cutover. If anything was off, our pre-migration snapshots were ready for a rollback–a safety we didn’t end up needing, but one that gave us confidence throughout the process.
 
 ## The Migration in Action
 
@@ -63,7 +63,7 @@ We strictly followed a playbook:
 5. Update app secrets to point to the new cluster.
 6. Restart the worker queue.
 
-The queue grew briefly as the system continued reading from the legacy cluster. Once the secret was updated to point to the new cluster, writes seamlessly shifted over. No downtime, no issues, This smooth transition was possible because the application uses an asynchronous routine to write to the cluster, allowing it to buffer and retry without blocking the main flow.
+The queue grew briefly as the system continued reading from the legacy cluster. Once the secret was updated to point to the new cluster, writes seamlessly shifted over. No downtime, no issues. This smooth transition was possible because the application uses an asynchronous routine to write to the cluster, allowing it to buffer and retry without blocking the main flow.
 
 ## Performance Gains
 
@@ -77,7 +77,7 @@ This performance gain is a direct result of the improved infrastructure and opti
 
 But the benefits go beyond just speed: 
 
-* **Single Sign-On (SSO) with Kibana**: Built-in SSO support with enterprise identity providers improves security and simple access management.
+* **Single Sign-On (SSO) with Kibana**: Built-in SSO support with enterprise identity providers improves security and simplifies access management.
 
 * **Specialized Support**: One of the key advantages is having direct support from the creators of Elasticsearch, including Service Level Agreements (SLAs) and priority response times, ensuring faster issue resolution and peace of mind.
 
@@ -85,7 +85,7 @@ But the benefits go beyond just speed:
 
 * **Advanced Monitoring and Observability**: Real-time insights via AutoOps make tracking system performance, health, and usage patterns easier.
 
-* **Reduced Operational Overhead**: Elastic Cloud’s auto scaling and built-in performance tuning make operations more straightforward and predictable.
+* **Reduced Operational Overhead**: Elastic Cloud’s autoscaling and built-in performance tuning make operations more straightforward and predictable.
 
 
 ## Final Thoughts
