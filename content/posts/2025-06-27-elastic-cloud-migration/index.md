@@ -16,7 +16,7 @@ This post walks you through our migration from AWS Elasticsearch to Elastic Clou
 
 Back in 2021, Elastic shifted its software offerings from Apache 2.0 to dual-licensed under Server Side Public License (SSPL) and the Elastic License. With this move, a significant software suite, including Elasticsearch and Kibana, was changed to a more restrictive license model.
 
-AWS responded by forking the codebase and launching OpenSearch.
+AWS responded by forking the codebase and launching [OpenSearch](https://aws.amazon.com/blogs/opensource/introducing-opensearch/).
 
 That put Loadsmart and many other companies at a crossroads:
 
