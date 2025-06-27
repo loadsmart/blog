@@ -9,6 +9,7 @@ comments: true
 ---
 
 At Loadsmart, Elasticsearch is a mission-critical resource that powers search functionality across multiple teams and applications. From helping shippers find available loads to enabling internal teams to query operational data efficiently, it plays a central role in delivering fast, reliable access to the data our business depends on.
+
 This post walks you through our migration from AWS Elasticsearch to Elastic Cloud, the “why”, the challenges, the wins, and the lessons we wish we’d known earlier.
 
 # The Fork in the Road: Why Migrate at All?
@@ -66,7 +67,6 @@ The queue grew briefly as the system continued reading from the legacy cluster. 
 
 ## Performance Gains
 
-
 After migrating the search service to the new Elastic Cloud cluster, we saw immediate and measurable improvements. Most notably, the p50 latency (median response time) for one of our highest-traffic endpoints dropped dramatically.
 
 As shown in the chart below, before the migration on March 20, the p50 latency typically hovered around 90ms. After the migration, and especially following the resolution of an audit log issue in early April, latency dropped significantly to around 40ms, with reduced variability and improved stability.
@@ -93,6 +93,7 @@ But the benefits go beyond just speed:
 Migrating to Elastic Cloud was more than a version upgrade–it was a strategic move forward in stability, performance, and operational simplicity. By moving off AWS Elasticsearch and onto Elastic’s managed service, we positioned ourselves to scale smarter, innovate faster, and operate more securely.
 
 Throughout the migration, we focused on automation, cross-team coordination, and risk mitigation. The results? Zero downtime, significantly improved latency, and a future-proofed foundation for more advanced use cases like vector search and real-time observability.
+
 We are excited to take advantage of the newest features. Just as important, we’re carrying forward the lessons from this migration, which will shape how we approach future projects, system upgrades, and architectural evolution.
 
 ## Key Takeaways
