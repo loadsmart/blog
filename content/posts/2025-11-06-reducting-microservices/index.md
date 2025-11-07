@@ -85,7 +85,7 @@ Even after applying the initial score as a filter, a critical analysis was still
 Is the feature that the service is supposed to deliver still in use? 
 Is it still relevant for our customers? Do we have any plans to leverage it in the future?
 
-We engage in various research activities to collect insights from Product Managers and Stakeholders. 
+We engaged in various research activities to collect insights from Product Managers and Stakeholders. 
 Additionally, a thorough technical assessment of the service was conducted and properly documented. 
 This process eliminated some more services, resulting in 16 out of 45 services identified for decommissioning.
 
