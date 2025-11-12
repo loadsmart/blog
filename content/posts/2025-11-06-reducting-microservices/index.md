@@ -143,7 +143,7 @@ This project was just the first step. We plan to decommission the remaining four
 
 ### Conclusion
 
-Reducing our microservices complexity was more than a cost-saving exercise—it was a strategic investment in our engineering 
+Reducing our microservices complexity was more than a cost-saving exercise — it was a strategic investment in our engineering 
 organization's future effectiveness. By approaching the problem systematically with data-driven scoring, careful validation, 
 and phased execution, we reduced complexity while maintaining system reliability.
 
