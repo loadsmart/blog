@@ -148,7 +148,7 @@ organization's future effectiveness. By approaching the problem systematically w
 and phased execution, we reduced complexity while maintaining system reliability.
 
 The most important lesson? Architecture, like code, requires continuous refactoring. The services we decommissioned weren't 
-mistakes—they were correct decisions that had outlived their usefulness. Recognizing when to evolve or eliminate architectural 
+mistakes — they were correct decisions that had outlived their usefulness. Recognizing when to evolve or eliminate architectural 
 patterns is just as important as knowing when to introduce them.
 
 > _Have you gone through a similar architecture consolidation project? What metrics did you find most valuable? I'd love to hear about your experiences in the comments._
