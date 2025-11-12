@@ -119,7 +119,7 @@ It's tempting to look back and label the creation of these services as "over-eng
 
 When these services were created, they addressed real problems:
 - We were smaller and optimizing for team autonomy over operational efficiency
-- Several services were built for features that had legitimate product hypotheses that simply didn't pan out
+- Several services were built for features that had legitimate product hypotheses that simply didn't pay out
 - Our scale and traffic patterns were different
 - Technology and best practices evolved (e.g., service mesh capabilities, observability tools)
 
