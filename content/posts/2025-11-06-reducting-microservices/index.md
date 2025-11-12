@@ -128,7 +128,7 @@ When these services were created, they addressed real problems:
 3. Optimization is continuous work
 
 Software architecture isn't "done". It requires ongoing attention and optimization, just like code refactoring. 
-Without this project, our complexity would have continued growing linearly while our ability to manage it grew sub-linearly—a recipe 
+Without this project, our complexity would have continued growing linearly while our ability to manage it grew sub-linearly — a recipe 
 for future technical debt and reduced competitiveness.
 
 We learned that:
