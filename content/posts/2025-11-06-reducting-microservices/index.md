@@ -123,7 +123,7 @@ When these services were created, they addressed real problems:
 - Our scale and traffic patterns were different
 - Technology and best practices evolved (e.g., service mesh capabilities, observability tools)
 
-**The lesson:** Good architectural decisions can become wrong architectural decisions as context changes. This isn't failure—it's evolution.
+**The lesson:** Good architectural decisions can become wrong architectural decisions as context changes. This isn't failure — it's evolution.
 
 3. Optimization is continuous work
 
