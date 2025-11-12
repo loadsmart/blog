@@ -151,10 +151,6 @@ The most important lesson? Architecture, like code, requires continuous refactor
 mistakes—they were correct decisions that had outlived their usefulness. Recognizing when to evolve or eliminate architectural 
 patterns is just as important as knowing when to introduce them.
 
----
-
-_Have you gone through a similar architecture consolidation project? What metrics did you find most valuable? I'd love to hear about your experiences in the comments._
-
----
+> _Have you gone through a similar architecture consolidation project? What metrics did you find most valuable? I'd love to hear about your experiences in the comments._
 
 Like to solve challenges like this one? We have many open positions at the moment. Check out our [engineering culture](https://github.com/loadsmart/culture) and the [careers page](https://loadsmart.com/careers/).
