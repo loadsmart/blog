@@ -6,14 +6,18 @@ jobs:
   notify-if-blog-post:
     if: github.event.pull_request.draft == false && (startsWith(github.event.pull_request.title, 'Post') || contains(github.event.pull_request.labels.*.name, 'post'))
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v2
-      - uses: loadsmart/github-actions/.github/actions/read-blog-post-content@master
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: loadsmart/github-actions/.github/actions/read-blog-post-content@75610976c054f38ac652b01129bb26b11405b4f4 # master
         name: Read blog post content from Markdown
         id: read-blog-post-content
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: loadsmart/github-actions/.github/actions/notify-of-new-blog-post-to-review@master
+      - uses: loadsmart/github-actions/.github/actions/notify-of-new-blog-post-to-review@75610976c054f38ac652b01129bb26b11405b4f4 # master
         name: Send Slack notification with preview of the post
         with:
           title: ${{ steps.read-blog-post-content.outputs.title }}
