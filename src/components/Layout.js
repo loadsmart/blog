@@ -8,7 +8,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import 'styles/typography.css'
 import 'styles/layout.css'
 
 import styled from 'styled-components'

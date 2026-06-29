@@ -82,18 +82,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['SharpSans'],
-          urls: ['/styles/typography.css'],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto+Slab\:300,400,500,400i,700`],
+        fonts: [
+          `Plus+Jakarta+Sans\:500,600,700`,
+          `Roboto+Slab\:300,400,500,400i,700`,
+        ],
         display: 'swap',
       },
     },
