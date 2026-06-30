@@ -84,10 +84,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Plus+Jakarta+Sans\:500,600,700`,
-          `Roboto+Slab\:300,400,500,400i,700`,
-        ],
+        fonts: [`Plus+Jakarta+Sans\:500,600,700`, `Manrope\:500,600,700`],
         display: 'swap',
       },
     },
