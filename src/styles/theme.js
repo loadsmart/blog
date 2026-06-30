@@ -1,8 +1,8 @@
 module.exports = {
   fonts: {
-    body: `SharpSans, Helvetica, Arial, sans-serif`,
-    title: `SharpSans, Helvetica, Arial, sans-serif`,
-    text: `'Roboto Slab', serif`,
+    body: `'Manrope', Helvetica, Arial, sans-serif`,
+    title: `'Plus Jakarta Sans', Helvetica, Arial, sans-serif`,
+    text: `'Manrope', Helvetica, Arial, sans-serif`,
   },
   colors: {
     background: '--background',

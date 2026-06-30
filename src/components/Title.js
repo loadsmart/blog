@@ -7,7 +7,7 @@ const Title = styled.h1`
   color: var(--text-primary);
   font-style: normal;
   font-family: ${fonts.title};
-  font-weight: 900;
+  font-weight: 700;
   font-size: 25px;
   line-height: 1.5em;
   margin: 0;
